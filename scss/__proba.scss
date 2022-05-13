@@ -1,0 +1,53 @@
+section.aboute {
+  position: relative;
+}
+
+.my_carousel_indicator {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+
+  ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0 -3px;
+    margin: 0 20px;
+
+    li {
+      display: flex;
+      width: 15px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: #5C7690;
+      opacity: 0.3;
+      margin: 0 3px;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
+.my_carousel_item {
+  position: relative;
+  padding-top: 88px;
+}
+.my_carousel_item_body {
+  position: relative;
+  z-index: 10;
+}
+.my_carousel_item_video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 0 0 40px;
+}

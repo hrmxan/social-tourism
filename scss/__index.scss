@@ -1,0 +1,40 @@
+$my_dark: #041C35;
+$my_blue: #2A85E3;
+$my_bg: #F2F6FA;
+
+@font-face {
+    font-family: 'my_font';
+    src: url('../font/SFProDisplay-Regular.ttf');
+}
+
+body {
+    background-color: $my_bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+// hidden scrolbar body
+body::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,241 @@
+section.top_cards {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  .my_card {
+    padding: 20px 20px 30px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+
+    .top {
+      margin-bottom: 40px;
+
+      p {
+        font-family: 'my_font';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: $my_dark;
+        opacity: 0.7;
+        margin-bottom: 6px;
+      }
+
+      strong {
+        font-family: 'my_font';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: $my_dark;
+      }
+    }
+
+    .sizes {
+      margin-bottom: 40px;
+
+      p {
+        font-family: 'my_font';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $my_dark;
+        opacity: 0.7;
+        margin-bottom: 3px;
+      }
+
+      h2 {
+        font-family: 'my_font';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 43px;
+        text-transform: uppercase;
+        color: #D20C0C;
+      }
+
+      .size_right {
+        h2 {
+          color: #2A85E3;
+        }
+      }
+    }
+
+    .protsent {
+      margin-bottom: 16px;
+
+      strong {
+        font-family: 'my_font';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: $my_dark;
+      }
+
+      span {
+        @include my_span_line(70%, #FBC400);
+      }
+
+      &.pros2 {
+        span {
+          @include my_span_line(50%, #05DE93);
+        }
+      }
+
+      &.pros3 {
+        span {
+          @include my_span_line(90%, #2A85E3);
+        }
+      }
+
+      &.pros4 {
+        margin-bottom: 40px;
+
+        span {
+          @include my_span_line(60%, #D20C0C);
+        }
+      }
+    }
+
+    .tips {
+      .tip {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 16px;
+
+        .color {
+          display: flex;
+          width: 24px;
+          height: 24px;
+          background-color: #FBC400;
+          margin-right: 15px;
+        }
+
+        &.tip2 {
+          .color {
+            background-color: #05DE93;
+          }
+        }
+
+        &.tip3 {
+          .color {
+            background-color: #2A85E3;
+          }
+        }
+
+        &.tip4 {
+          .color {
+            background-color: #D20C0C;
+          }
+        }
+      }
+    }
+  }
+
+  .my_card {
+    height: 100%;
+
+    .users {
+      .user {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 17px;
+
+        img {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          margin-right: 20px;
+        }
+
+        .text {
+          strong {
+            font-family: 'my_font';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            color: $my_dark;
+            margin-bottom: 5px;
+          }
+
+          p {
+            font-family: 'my_font';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: $my_dark;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    .button_go {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin-right: 14px;
+      }
+
+      a {
+        font-family: 'my_font';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: $my_blue;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      select,
+      input {
+        @include my_input;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .pays {
+        a {
+          @include my_input;
+          display: flex;
+          width: 100%;
+          height: 100%;
+
+          img {
+            object-fit: contain;
+            max-width: 100%;
+          }
+        }
+      }
+
+      .submit_form {
+        padding: 16px;
+        background-color: $my_blue;
+        border-radius: 50px;
+        color: #FFFFFF;
+        font-family: 'my_font';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 44px;
+      }
+    }
+  }
+}

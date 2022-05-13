@@ -1,0 +1,124 @@
+section.nash_tur {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    h2 {
+      font-family: 'my_font';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 42px;
+      line-height: 50px;
+      color: $my_dark;
+    }
+
+    .button_go {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin-right: 14px;
+      }
+
+      a {
+        font-family: 'my_font';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: $my_blue;
+      }
+    }
+  }
+
+  .tur_card {
+    display: flex;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    
+    
+    img {
+      width: 100%;
+      transition: 0.5s;
+      position: relative;
+      z-index: 0;
+    }
+
+    .bg {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: 0.5s;
+      background: linear-gradient(0deg, #030303 -24.8%, rgba(170, 145, 130, 0) 90%);
+    }
+
+    .text {
+      display: flex;
+      position: relative;
+      z-index: 3;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 15px;
+
+      span {
+        font-family: 'my_font';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFFFFF;
+        background-color: $my_blue;
+        padding: 6px 12px;
+      }
+
+      h3 {
+        font-family: 'my_font';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: #FFFFFF;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-family: 'my_font';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFFFFF;
+      }
+    }
+    &:hover {
+      img {
+        transform: scale(1.3);
+      }
+      .bg {
+        transition: 0.5s;
+        top: -80%;
+      }
+  
+    }
+  }
+}

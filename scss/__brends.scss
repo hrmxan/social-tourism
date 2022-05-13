@@ -1,0 +1,37 @@
+section.brends {
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    h2 {
+      font-family: 'my_font';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 42px;
+      line-height: 50px;
+      color: $my_dark;
+    }
+  }
+
+  .brends_body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: -15px;
+
+    a {
+      display: flex;
+      margin: 0 15px;
+
+      img {
+        width: 185px;
+        height: 185px;
+        object-fit: contain;
+        mix-blend-mode: luminosity;
+        opacity: 0.8;
+      }
+    }
+  }
+}

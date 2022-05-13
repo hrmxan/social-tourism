@@ -1,0 +1,198 @@
+main {
+  position: relative;
+}
+
+section.actions {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(4, 28, 53, 0.8);
+  overflow: hidden;
+
+  &.fix_on {
+    display: flex;
+
+    .my_fixed_card {
+      opacity: 1;
+    }
+  }
+}
+
+
+
+.my_card {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.my_fixed_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  opacity: 0;
+  transition: 0.5s;
+
+  .krestik {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translateX(15px);
+  }
+
+  .top_text {
+    font-family: 'my_font';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: rgba($color: $my_dark, $alpha: 0.7);
+    margin-bottom: 6px;
+  }
+
+  strong {
+    display: flex;
+    align-items: center;
+    font-family: 'my_font';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: $my_dark;
+    margin-bottom: 30px;
+  }
+
+  .sum_buttons {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba($color: $my_blue, $alpha: 0.5);
+    margin-bottom: 31px;
+
+    a {
+      font-family: 'my_font';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      color: rgba($color: $my_dark, $alpha: 0.7);
+      margin-right: 25px;
+      padding: 7px 5px;
+      position: relative;
+      transition: 0.5s;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 2px);
+        width: 0;
+        height: 3px;
+        background-color: $my_blue;
+        border-radius: 3px;
+      }
+
+      &.active {
+        color: $my_blue;
+
+        &::after {
+          content: '';
+          width: 100%;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+
+  .plast_card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-image: url('../../img/plast_card.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    margin-bottom: 40px;
+
+    h3 {
+      font-family: 'my_font';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+      margin-bottom: 17px;
+    }
+
+    p {
+      font-family: 'my_font';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #FFFFFF;
+    }
+  }
+
+  .card_submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-family: 'my_font';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    padding: 16px 24px;
+    background-color: $my_blue;
+    box-shadow: 0px 8px 30px rgba(0, 71, 255, 0.25);
+    border-radius: 50px;
+
+    &:hover {
+      color: $my_blue;
+      background-color: #FFFFFF;
+      border: 2px solid $my_blue;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.button_go {
+  transition: 0.5s;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    img {
+      animation-name: view_button_ic;
+      animation-duration: 0.5s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+    }
+  }
+}
+
+@keyframes view_button_ic {
+  0% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(-5px);
+  }
+}
