@@ -55,10 +55,10 @@ card_sum_buttons.forEach(element => {
     });
 });
 
-let tours_cards = document.querySelectorAll('.tours_cards');
+let delayu_dobro = document.querySelectorAll('.delayu_dobro');
 let actions = document.getElementById('actions');
 let krestikFix = document.getElementById('krestikFix');
-tours_cards.forEach(element => {
+delayu_dobro.forEach(element => {
     element.addEventListener('click', function() {
         actions.classList.add('fix_on');
         document.body.style.overflow = 'hidden';
