@@ -100,3 +100,11 @@ kupitTurSum.addEventListener('click', function(e) {
     fixCard2.classList.add('card_fix');
     document.body.style.overflow = 'hidden';
 });
+
+let mute_buttons = document.querySelectorAll('.mute_buttons');
+mute_buttons.forEach(element => {
+    element.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('salom');
+    });
+});
