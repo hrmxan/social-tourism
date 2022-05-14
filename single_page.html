@@ -96,9 +96,8 @@
   <main>
 
     <section id="actions" class="actions single_action">
-      <div class="myfix_container">
-
-        <div class="my_fixed_card my_card single_fix_card position-relative">
+      <div id="fixCard1" class="myfix_container">
+        <div class="my_fixed_card my_card single_fix_card">
           <a id="krestikFix" class="krestik" href="#actions">
             <img src="./img/svg/close-square.svg">
           </a>
@@ -113,6 +112,29 @@
               </p>
               <input type="text" placeholder="ФИО">
               <input type="text" placeholder="+998 (--) --- -- --">
+              <a href="#" class="kok_buttons">
+                Продолжить
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="fixCard2" class="myfix_container">
+        <div class="my_fixed_card my_card single_fix_card">
+          <a id="krestikFix" class="krestik" href="#actions">
+            <img src="./img/svg/close-square.svg">
+          </a>
+          <div class="row single_fix_card_row position-relative">
+            <div class="d-none d-md-flex col-md-7 col-lg-6 left">
+              <img src="./img/buy_tur_bg.png" alt="fixcard">
+            </div>
+            <div class="col-12 col-md-5 col-lg-6 right">
+              <h4>Купить тур</h4>
+              <p>
+                Пожалуйста введите ваше карта номер
+              </p>
+              <input type="text" placeholder="Номер карты">
+              <input type="number" placeholder="Владелец карт">
               <a href="#" class="kok_buttons">
                 Продолжить
               </a>
@@ -167,7 +189,7 @@
                     76
                   </strong>
                 </div>
-                <a class="kok_buttons buy_tur_actions" href="#">
+                <a id="buyYurDate" class="kok_buttons buy_tur_actions" href="#">
                   Купить тур
                 </a>
               </div>
@@ -299,7 +321,7 @@
             </p>
             <input type="text" placeholder="ФИО">
             <input type="text" placeholder="+998 (--) --- -- --">
-            <a href="#" class="kok_buttons buy_tur_actions">
+            <a id="kupitTurSum" href="#" class="kok_buttons buy_tur_actions">
               Продолжить
             </a>
           </div>
@@ -425,6 +447,7 @@
     </div>
   </footer>
 
+  <script src="./js/aos.js"></script>
 
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/popper.min.js"></script>
