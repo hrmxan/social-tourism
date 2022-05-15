@@ -1,0 +1,100 @@
+.partners_title {
+  font-family: 'my_font';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 55px;
+  text-align: center;
+  color: $my_dark;
+  max-width: 789px;
+  text-align: center;
+  margin: 100px auto 75px;
+}
+
+.part_form {
+  margin-bottom: 200px;
+  @media (max-width: 767px) {
+    margin-bottom: 100px;
+  }
+
+  .container {
+    background-image: url('../../img/part_bg.png');
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    background-position: center left;
+
+    @media (max-width: 767px) {
+      background-position: bottom right;
+      background-size: auto 70%;
+    }
+    @media (max-width: 575px) {
+      background-image: none;
+    }
+  }
+}
+
+.part_form_right {
+  margin-top: 47px;
+  margin-bottom: 47px;
+}
+
+.partners_brends {
+  margin-bottom: 75px;
+}
+
+.part_about {
+  margin-bottom: 100px;
+
+  h3 {
+    font-family: 'my_font';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $my_dark;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-family: 'my_font';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba($color: $my_dark, $alpha: 0.8);
+    margin-bottom: 16px;
+  }
+}
+
+.part_form {
+  h3 {
+    font-family: 'my_font';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: $my_dark;
+    margin-bottom: 30px;
+  }
+
+  input {
+    display: flex;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid rgba(4, 28, 53, 0.1);
+    border-radius: 4px;
+
+    font-family: 'my_font';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $my_dark;
+    padding: 16px;
+    margin-bottom: 30px;
+  }
+}
+
+.part_form_forms {
+  margin-bottom: 30px;
+}

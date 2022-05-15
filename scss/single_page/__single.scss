@@ -140,6 +140,8 @@
   justify-content: center;
   align-items: center;
   background-color: $my_blue;
+  border: 2px solid $my_blue;
+
   padding: 16px 24px;
   border-radius: 50px;
   font-family: 'my_font';
@@ -151,8 +153,10 @@
   transition: 0.5s;
 
   &:hover {
-    color: #FFFFFF;
+    color: $my_blue !important;
+    background-color: #FFFFFF !important;
     box-shadow: 0px 8px 30px rgba(0, 71, 255, 0.25);
+    border: 2px solid $my_blue;
   }
 }
 

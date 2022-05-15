@@ -181,7 +181,8 @@ section.top_cards {
       align-items: center;
       justify-content: center;
       margin-top: 30px;
-
+      
+    
       img {
         width: 40px;
         height: 40px;
@@ -237,5 +238,16 @@ section.top_cards {
         margin-top: 44px;
       }
     }
+  }
+}
+@keyframes view_button_ic_90 {
+  0% {
+    transform: translateY(-5);
+
+  }
+
+  100% {
+    transform: translateY(5);
+
   }
 }

@@ -49,6 +49,11 @@
               </a>
             </li>
             <li>
+              <a class="link_items" href="./partners.html">
+                Наш партнёры
+              </a>
+            </li>
+            <li>
               <a class="link_items" href="./tours.html">
                 Наши туры
               </a>
@@ -61,7 +66,7 @@
           </ul>
         </div>
         <div class="buttons">
-          <a href="#" class="btn1 my_btn">
+          <a href="#" class="btn1 my_btn kok_buttons d-sm-flex d-none">
             Пожертвовать им
           </a>
           <div id="languageId" class="btn2 my_btn d-none d-md-flex">
@@ -109,12 +114,15 @@
             <h3 class="numer_card">8600 0000 0000 0000</h3>
             <p class="name">Палончиева Палончи</p>
           </div>
-          <a class="card_submit" href="#">Делаю добро</a>
+          <a class="card_submit kok_buttons" href="#">Делаю добро</a>
         </div>
       </div>
     </section>
 
-    <section class="proba aboute">
+    <section id="videoCNeyBody" class="proba aboute">
+      <div class="video_show container">
+        <video  id="videoCNey" src="./video/video1.mp4" poster="./img/video_bg.png"></video>
+      </div>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="fade-up">
         <div class="carousel-inner">
           <div class="carousel-item active my_carousel_item">
@@ -128,15 +136,15 @@
                   Она тоже хочет путешествовать мир,
                   как нас
                 </p>
-                <div id="playButton" class="play_button">
-                  <a href="#playButton">
+                <div class="play_buttos_c_ney play_button">
+                  <a href="#" class="button_go">
                     <img src="./img/svg/play_button.svg" alt="play">
                     Посмотреть видео о ней
                   </a>
                 </div>
               </div>
               <div class="row aboute_content">
-                <div class="col-8">
+                <div class="col-12 col-sm-10 col-xl-8">
                   <div class="my_card">
                     <div class="row">
                       <div class="col-12 mb-3 mb-lg-0 col-lg-4 d-flex flex-column">
@@ -166,7 +174,7 @@
                             <input class="w-100" type="number" placeholder="Сумма">
                           </div>
                           <div class="col-12 col-lg-5 d-flex align-content-between justify-content-end mt-2 mt-lg-0">
-                            <a href="#" class="submin_sum">
+                            <a href="#" class="submin_sum kok_buttons">
                               Делать добро
                             </a>
                           </div>
@@ -191,15 +199,15 @@
                   Она тоже хочет путешествовать мир,
                   как нас
                 </p>
-                <div id="playButton" class="play_button">
-                  <a href="#playButton">
+                <div class="play_buttos_c_ney play_button">
+                  <a href="#" class="button_go">
                     <img src="./img/svg/play_button.svg" alt="play">
                     Посмотреть видео о ней
                   </a>
                 </div>
               </div>
               <div class="row aboute_content">
-                <div class="col-8">
+                <div class="col-12 col-sm-10 col-xl-8">
                   <div class="my_card">
                     <div class="row">
                       <div class="col-12 mb-3 mb-lg-0 col-lg-4 d-flex flex-column">
@@ -229,7 +237,7 @@
                             <input class="w-100" type="number" placeholder="Сумма">
                           </div>
                           <div class="col-12 col-lg-5 d-flex align-content-between justify-content-end mt-2 mt-lg-0">
-                            <a href="#" class="submin_sum">
+                            <a href="#" class="submin_sum kok_buttons">
                               Делать добро
                             </a>
                           </div>
@@ -254,15 +262,15 @@
                   Она тоже хочет путешествовать мир,
                   как нас
                 </p>
-                <div id="playButton" class="play_button">
-                  <a href="#playButton">
+                <div class="play_buttos_c_ney play_button">
+                  <a href="#" class="button_go">
                     <img src="./img/svg/play_button.svg" alt="play">
                     Посмотреть видео о ней
                   </a>
                 </div>
               </div>
               <div class="row aboute_content">
-                <div class="col-8">
+                <div class="col-12 col-sm-10 col-xl-8">
                   <div class="my_card">
                     <div class="row">
                       <div class="col-12 mb-3 mb-lg-0 col-lg-4 d-flex flex-column">
@@ -292,7 +300,7 @@
                             <input class="w-100" type="number" placeholder="Сумма">
                           </div>
                           <div class="col-12 col-lg-5 d-flex align-content-between justify-content-end mt-2 mt-lg-0">
-                            <a href="#" class="submin_sum">
+                            <a href="#" class="submin_sum kok_buttons">
                               Делать добро
                             </a>
                           </div>
@@ -467,7 +475,7 @@
                   </div>
                 </div>
               </div>
-              <div class="button_go">
+              <div class="button_go prosmotr_vse">
                 <a href="#">
                   <img src="./img/svg/button_go.svg" alt="go">
                   Посмотреть всех посетителей
@@ -513,7 +521,7 @@
                     </a>
                   </div>
                 </div>
-                <a class="submit_form delayu_dobro" href="#">
+                <a class="submit_form delayu_dobro kok_buttons" href="#">
                   Делаю добро
                 </a>
               </form>
@@ -817,6 +825,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>

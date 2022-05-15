@@ -34,14 +34,17 @@ section.aboute {
     }
   }
 }
+
 .my_carousel_item {
   position: relative;
   padding-top: 88px;
 }
+
 .my_carousel_item_body {
   position: relative;
   z-index: 10;
 }
+
 .my_carousel_item_video {
   position: absolute;
   right: 0;
@@ -50,4 +53,63 @@ section.aboute {
   height: 100%;
   object-fit: cover;
   border-radius: 0 0 0 40px;
+  @media (max-width: 991px) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+
+.aboute {
+  .carousel {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  .video_show {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: 0.5s;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+
+    video {
+      display: flex;
+      position: relative;
+      width: 50%;
+      height: 95%;
+      margin-top: 5%;
+      object-fit: cover;
+      transition: 0.5s;
+
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &.video_play {
+    .carousel {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .video_show {
+      opacity: 1;
+      visibility: visible;
+
+      video {
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
 }
