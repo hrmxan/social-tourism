@@ -374,11 +374,18 @@ section.aboute .content {
 section.aboute .content h1 {
   font-family: 'my_font';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 800;
   font-size: 42px;
   line-height: 54px;
   color: #041C35;
   margin-bottom: 20px;
+}
+
+@media (max-width: 575px) {
+  section.aboute .content h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 
 section.aboute .content p {
@@ -392,10 +399,24 @@ section.aboute .content p {
   margin-bottom: 40px;
 }
 
+@media (max-width: 575px) {
+  section.aboute .content p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+}
+
 section.aboute .content .play_button {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
+}
+
+@media (max-width: 575px) {
+  section.aboute .content .play_button {
+    margin-bottom: 20px;
+  }
 }
 
 section.aboute .content .play_button a {
@@ -1795,6 +1816,12 @@ section.aboute {
   padding-top: 88px;
 }
 
+@media (max-width: 575px) {
+  .my_carousel_item {
+    padding-top: 30px;
+  }
+}
+
 .my_carousel_item_body {
   position: relative;
   z-index: 10;
@@ -1853,13 +1880,11 @@ section.aboute {
 .aboute.video_play .carousel {
   visibility: hidden;
   opacity: 0;
-  position: absolute;
 }
 
 .aboute.video_play .video_show {
   opacity: 1;
   visibility: visible;
-  position: relative;
 }
 
 .aboute.video_play .video_show video {

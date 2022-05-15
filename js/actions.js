@@ -184,7 +184,7 @@ let videoCNeyBody = document.getElementById('videoCNeyBody');
 try {
     play_buttos_c_ney.forEach(element => {
         element.addEventListener('click', function (e) {
-            // e.preventDefault();
+            e.preventDefault();
             
             setTimeout(function () {
                 videoCNey.play();

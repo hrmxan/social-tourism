@@ -38,6 +38,9 @@ section.aboute {
 .my_carousel_item {
   position: relative;
   padding-top: 88px;
+  @media (max-width: 575px) {
+    padding-top: 30px;
+  }
 }
 
 .my_carousel_item_body {
@@ -99,13 +102,13 @@ section.aboute {
     .carousel {
       visibility: hidden;
       opacity: 0;
-      position: absolute;
+      // position: absolute;
     }
 
     .video_show {
       opacity: 1;
       visibility: visible;
-      position: relative;
+      // position: relative;
 
       video {
         width: 100%;

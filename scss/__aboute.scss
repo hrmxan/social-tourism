@@ -16,11 +16,15 @@ section.aboute {
     h1 {
       font-family: 'my_font';
       font-style: normal;
-      font-weight: 400;
+      font-weight: 800;
       font-size: 42px;
       line-height: 54px;
       color: $my_dark;
       margin-bottom: 20px;
+      @media (max-width: 575px) {
+        font-size: 32px;
+        line-height: 40px;
+      }
     }
 
     p {
@@ -32,12 +36,20 @@ section.aboute {
       color: $my_dark;
       opacity: 0.7;
       margin-bottom: 40px;
+      @media (max-width: 575px) {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
     }
 
     .play_button {
       display: flex;
       align-items: center;
       margin-bottom: 40px;
+      @media (max-width: 575px) {
+        margin-bottom: 20px;
+      }
 
       a {
         display: flex;
