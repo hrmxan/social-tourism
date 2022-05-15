@@ -1,6 +1,10 @@
 section.top_cards {
   padding-top: 80px;
   padding-bottom: 80px;
+  @media (max-width: 575px) {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
 
   .my_card {
     padding: 20px 20px 30px;
