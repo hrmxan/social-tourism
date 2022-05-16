@@ -448,6 +448,12 @@ section.aboute .my_card .text {
   margin-bottom: 41px;
 }
 
+@media (max-width: 575px) {
+  section.aboute .my_card .text {
+    margin-bottom: 20px;
+  }
+}
+
 section.aboute .my_card .text p {
   font-family: 'my_font';
   font-style: normal;
@@ -521,6 +527,13 @@ section.aboute .my_card .sums .min {
   opacity: 0.7;
 }
 
+@media (max-width: 575px) {
+  section.aboute .my_card .sums .min {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
 section.aboute .my_card .sums .max {
   font-family: 'my_font';
   font-style: normal;
@@ -529,6 +542,13 @@ section.aboute .my_card .sums .max {
   line-height: 24px;
   color: #D20C0C;
   opacity: 0.7;
+}
+
+@media (max-width: 575px) {
+  section.aboute .my_card .sums .max {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 section.aboute .my_card .submin_sum {
@@ -1869,7 +1889,7 @@ section.aboute {
   display: flex;
   position: relative;
   width: 50%;
-  height: 95%;
+  height: 80%;
   margin-top: 5%;
   object-fit: cover;
   transition: 0.5s;

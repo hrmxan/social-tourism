@@ -79,6 +79,9 @@ section.aboute {
 
     .text {
       margin-bottom: 41px;
+      @media (max-width: 575px) {
+        margin-bottom: 20px;
+      }
 
       p {
         font-family: 'my_font';
@@ -140,6 +143,10 @@ section.aboute {
         line-height: 24px;
         color: #079D20;
         opacity: 0.7;
+        @media (max-width: 575px) {
+          font-size: 14px;
+          line-height: 20px;
+        }
       }
 
       .max {
@@ -150,6 +157,10 @@ section.aboute {
         line-height: 24px;
         color: #D20C0C;
         opacity: 0.7;
+        @media (max-width: 575px) {
+          font-size: 14px;
+          line-height: 20px;
+        }
       }
     }
 
