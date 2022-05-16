@@ -1,12 +1,21 @@
 section.reportaj {
   margin-top: 160px;
   padding-bottom: 80px;
+  @media (max-width: 575px) {
+    margin-top: 80px;
+    padding-bottom: 40px;
+  }
 
   .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 50px;
+    @media (max-width: 575px) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
 
     h2 {
       font-family: 'my_font';

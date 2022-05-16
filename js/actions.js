@@ -82,7 +82,7 @@ let my_dropdowns = document.querySelectorAll('.my_dropdowns');
 try {
     my_dropdowns.forEach(element => {
         element.addEventListener('click', function (e) {
-            e.target.classList.toggle('opened');
+            e.target.parentElement.classList.toggle('opened')
         });
     });
 }
@@ -166,8 +166,8 @@ try {
     console.log(e);
 }
 
+let mute_buttons = document.querySelectorAll('.mute_buttons');
 try {
-    let mute_buttons = document.querySelectorAll('.mute_buttons');
     mute_buttons.forEach(element => {
         element.addEventListener('click', function (e) {
             e.preventDefault();
@@ -185,12 +185,46 @@ try {
     play_buttos_c_ney.forEach(element => {
         element.addEventListener('click', function (e) {
             e.preventDefault();
-            
             setTimeout(function () {
                 videoCNey.play();
             }, 500);
 
             videoCNeyBody.classList.add('video_play');
+        });
+    });
+} catch (e) {
+    console.log(e);
+}
+let stop_video_play = document.querySelectorAll('.stop_video_play');
+
+try {
+    stop_video_play.forEach(element => {
+        element.addEventListener('click', function (e) {
+            e.preventDefault();
+            videoCNey.pause();
+            videoCNeyBody.classList.remove('video_play');
+        });
+    });
+}
+catch (e) {
+    console.log(e);
+}
+let my_selects = document.querySelectorAll('.my_selects');
+try {
+    my_selects.forEach(element => {
+        element.addEventListener('click', function (e) {
+            element.classList.toggle('show');
+        });
+    });
+} catch (e) {
+    console.log(e);
+}
+let my_select_items = document.querySelectorAll('.my_select_items');
+try {
+    my_select_items.forEach(element => {
+        element.addEventListener('click', function (e) {
+            let selectd_item = e.target.innerHTML;
+            e.target.offsetParent.offsetParent.childNodes[1].innerHTML = selectd_item;
         });
     });
 } catch (e) {

@@ -7,6 +7,11 @@ section.yangiliklar {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 50px;
+    @media (max-width: 575px) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
 
     h2 {
       font-family: 'my_font';
@@ -15,6 +20,10 @@ section.yangiliklar {
       font-size: 42px;
       line-height: 50px;
       color: $my_dark;
+      @media (max-width: 575px) {
+        font-size: 32px;
+        line-height: 40px;
+      }
     }
 
     .button_go {
@@ -48,7 +57,6 @@ section.yangiliklar {
     height: 100%;
     transition: 0.5s;
     &:hover {
-      border: 0 solid transparent;
       transform: translateY(-10px);
       box-shadow: 0px 8px 60px rgba(0, 71, 255, 0.15);
       background-color: #FFFFFF;

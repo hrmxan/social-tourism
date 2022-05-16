@@ -4,6 +4,66 @@ main {
 section {
   position: relative;
 }
+.my_dropdowns {
+  position: relative;
+  display: flex;
+  transition: 0.5s;
+  color: #FFFFFF;
+  img {
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+    transform: rotate(180deg);
+    transition: 0.5s;
+  }
+
+  .dropdown_sections {
+    display: flex;
+    flex-direction: column;
+    min-width: 250%;
+    max-width: 300%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(0);
+    background: #FFFFFF;
+    box-shadow: 0px 8px 60px rgba(0, 71, 255, 0.15);
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.5s;
+
+    a {
+      display: flex;
+      align-items: center;
+      font-family: 'my_font';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: $my_dark;
+      opacity: 0.8;
+      padding: 10px;
+      transition: 0.5s;
+      &:hover {
+        color: #2A85E3;
+        opacity: 1;
+      }
+    }
+  }
+
+  &.opened {
+    img {
+      transform: rotate(0deg);
+    }
+    .dropdown_sections {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(10px);
+    }
+  }
+}
 
 .myfix_container {
   display: flex;
@@ -201,6 +261,73 @@ section.actions {
       background-color: #FFFFFF;
       border: 2px solid $my_blue;
       box-sizing: border-box;
+    }
+  }
+}
+
+.my_selects {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    font-family: 'my_font';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $my_dark;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+    transform: rotate(180deg);
+    transition: 0.5s;
+  }
+  .my_select_body {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 8px 30px rgba(0, 71, 255, 0.25);
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: 0.5s;
+    a.my_select_items {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      font-family: 'my_font';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: $my_dark;
+      padding: 16px;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: rgba($color: $my_blue, $alpha: 0.1);
+      }
+    }
+  }
+  &.show {
+    .my_select_body {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(5px);
+    }
+    img {
+      transform: rotate(0deg);
     }
   }
 }

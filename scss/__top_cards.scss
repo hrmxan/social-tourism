@@ -209,7 +209,8 @@ section.top_cards {
       align-items: center;
 
       select,
-      input {
+      input,
+      .my_select {
         @include my_input;
         width: 100%;
         margin-bottom: 20px;
@@ -221,6 +222,11 @@ section.top_cards {
           display: flex;
           width: 100%;
           height: 100%;
+          transition: 0.5s;
+          box-shadow: 0;
+          &:hover {
+            box-shadow: 0 0 15px 2px #0000002e;
+          }
 
           img {
             object-fit: contain;

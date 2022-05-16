@@ -28,7 +28,7 @@
         <div class="menu" id="navbarColapse">
           <ul class="menu_links">
             <li>
-              <div class="my_dropdowns">
+              <div id="myDropDown" class="my_dropdowns">
                 <a class="link_items mute_buttons" href="#">
                   О нас
                   <img src="./img/svg/strelka.svg">
@@ -121,7 +121,15 @@
 
     <section id="videoCNeyBody" class="proba aboute">
       <div class="video_show container">
-        <video  id="videoCNey" src="./video/video1.mp4" poster="./img/video_bg.png"></video>
+        <video  id="videoCNey" src="./video/video1.mp4" poster="./img/video_bg.png">
+          
+        </video>
+        <a class="stop_video_play mute_buttons" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-stop-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3z"/>
+          </svg>
+        </a>
       </div>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="fade-up">
         <div class="carousel-inner">
@@ -476,7 +484,7 @@
                 </div>
               </div>
               <div class="button_go prosmotr_vse">
-                <a href="#">
+                <a href="./posetiteli.html">
                   <img src="./img/svg/button_go.svg" alt="go">
                   Посмотреть всех посетителей
                 </a>
@@ -494,14 +502,23 @@
                 </strong>
               </div>
               <form>
-                <select name="name">
-                  <option value="Я помогу">
-                    Я помогу
-                  </option>
-                  <option value="Я помогу">
-                    Я помогу
-                  </option>
-                </select>
+               <div class="my_select my_selects">
+                 <a href="#" class="mute_buttons">
+                  Я помогу
+                 </a>
+                 <img src="./img/svg/strelka.svg" alt="strelka icon">
+                 <div class="my_select_body">
+                   <a href="#" class="mute_buttons my_select_items">
+                    Я помогу1
+                   </a>
+                   <a href="#" class="mute_buttons my_select_items">
+                    Я помогу2
+                   </a>
+                   <a href="#" class="mute_buttons my_select_items">
+                    Я помогу3
+                   </a>
+                 </div>
+               </div>
                 <input type="number" placeholder="Номер карты">
                 <input type="number" placeholder="Сумма">
                 <div class="row">
@@ -534,8 +551,8 @@
     <section class="nash_tur">
       <div class="container">
         <div class="top">
-          <h2 data-aos="fade-up">Наши туры</h2>
-          <div data-aos="fade-up" class="button_go">
+          <h2 data-aos="fade-right">Наши туры</h2>
+          <div data-aos="fade-left" class="button_go">
             <a href="./tours.html">
               <img src="./img/svg/button_go.svg" alt="go">
               Посмотреть все
@@ -544,9 +561,9 @@
         </div>
         <div class="tur_cards row">
           <div class="col-12 mb-5 mb-lg-0 col-lg-4">
-            <a data-aos="fade-up" href="./single_page.html" class="tur_card">
+            <a href="./single_page.html" class="tur_card tours_cards" data-aos="fade-up">
               <div class="bg"></div>
-              <img src="./img/tur_card1.png" alt="buxara">
+              <img class="tur_card_img" src="./img/tur_card1.png" alt="buxara">
               <div class="text">
                 <span>Бухара</span>
                 <div class="context">
@@ -557,9 +574,9 @@
             </a>
           </div>
           <div class="col-12 mb-5 mb-lg-0 col-lg-4">
-            <a data-aos="fade-up" href="./single_page.html" class="tur_card">
+            <a href="./single_page.html" class="tur_card tours_cards" data-aos="fade-up">
               <div class="bg"></div>
-              <img src="./img/tur_card2.png" alt="buxara">
+              <img class="tur_card_img" src="./img/tur_card2.png" alt="buxara">
               <div class="text">
                 <span>Самарканд</span>
                 <div class="context">
@@ -570,9 +587,9 @@
             </a>
           </div>
           <div class="col-12 mb-5 mb-lg-0 col-lg-4">
-            <a data-aos="fade-up" href="./single_page.html" class="tur_card">
+            <a href="./single_page.html" class="tur_card tours_cards" data-aos="fade-up">
               <div class="bg"></div>
-              <img src="./img/tur_card3.png" alt="buxara">
+              <img class="tur_card_img" src="./img/tur_card3.png" alt="buxara">
               <div class="text">
                 <span>Национальность Узбеки</span>
                 <div class="context">
@@ -589,15 +606,14 @@
     <section class="sayohat">
       <div class="container">
         <div class="row">
-          <div class="col-7">
+          <div data-aos="fade-up" class="col-12 col-md-7">
             <h3>
-              «Путешествие для всех!»
-              для соотечественников с ограниченной возможностью.
+              «Путешествие для всех!» для соотечественников с ограниченной возможностью.
             </h3>
-            <p>
+            <p data-aos="fade-up">
               На встрече обсуждены организационные вопросы осуществляемого благотворительного путешествия
             </p>
-            <a href="#">
+            <a data-aos="fade-up" href="#">
               Узнать больше
             </a>
           </div>
@@ -608,8 +624,8 @@
     <section class="reportaj">
       <div class="container">
         <div class="top">
-          <h2>Репортажы о поездках</h2>
-          <div class="button_go">
+          <h2 data-aos="fade-right">Репортажы о поездках</h2>
+          <div data-aos="fade-left" class="button_go">
             <a href="#">
               <img src="./img/svg/button_go.svg" alt="go">
               Посмотреть все
@@ -619,7 +635,7 @@
 
         <div class="row">
           <div class="col-12 col-lg-6 mb-4 mb-lg-0 video_cards">
-            <div class="video_card">
+            <div data-aos="fade-up" class="video_card">
               <video id="vide1" poster="./img/video_card.png" src="./video/video1.mp4"></video>
               <div class="bg"></div>
               <div class="text">
@@ -635,7 +651,7 @@
             </div>
           </div>
           <div class="col-6 col-lg-3 video_cards">
-            <div class="video_card">
+            <div data-aos="fade-up" class="video_card">
               <video id="vide2" poster="./img/video_card2.png" src="./video/video1.mp4"></video>
               <div class="bg"></div>
               <div class="text d-none">
@@ -651,7 +667,7 @@
             </div>
           </div>
           <div class="col-6 col-lg-3 video_cards">
-            <div class="video_card">
+            <div data-aos="fade-up" class="video_card">
               <video id="vide3" poster="./img/video_card3.png" src="./video/video1.mp4"></video>
               <div class="bg"></div>
               <div class="text d-none">
@@ -673,8 +689,8 @@
     <section class="yangiliklar">
       <div class="container">
         <div class="top">
-          <h2>Наши новости</h2>
-          <div class="button_go">
+          <h2 data-aos="fade-right">Наши новости</h2>
+          <div data-aos="fade-left" class="button_go">
             <a href="#">
               <img src="./img/svg/button_go.svg" alt="go">
               Посмотреть все
@@ -683,7 +699,7 @@
         </div>
         <div class="row news">
           <div class="col-12 col-md-4 mb-4 mb-md-0">
-            <div class="news_card active">
+            <div data-aos="fade-up" class="news_card active">
               <img class="card_img" src="./img/news_card1.png" alt="news_card">
               <div class="card_body">
                 <div class="time">
@@ -696,7 +712,7 @@
             </div>
           </div>
           <div class="col-12 col-md-4 mb-4 mb-md-0">
-            <div class="news_card">
+            <div data-aos="fade-up" class="news_card">
               <img class="card_img" src="./img/news_card2.png" alt="news_card">
               <div class="card_body">
                 <div class="time">
@@ -709,7 +725,7 @@
             </div>
           </div>
           <div class="col-12 col-md-4 mb-4 mb-md-0">
-            <div class="news_card">
+            <div data-aos="fade-up" class="news_card">
               <img class="card_img" src="./img/news_card3.png" alt="news_card">
               <div class="card_body">
                 <div class="time">
@@ -732,22 +748,22 @@
         </div>
         <div class="brends_body">
           <a href="#">
-            <img src="./img/brand1.png" alt="brand">
+            <img data-aos="fade-up" src="./img/brand1.png" alt="brand">
           </a>
           <a href="#">
-            <img src="./img/brand2.png" alt="brand">
+            <img data-aos="fade-up" src="./img/brand2.png" alt="brand">
           </a>
           <a href="#">
-            <img src="./img/brand3.png" alt="brand">
+            <img data-aos="fade-up" src="./img/brand3.png" alt="brand">
           </a>
           <a href="#">
-            <img src="./img/brand4.png" alt="brand">
+            <img data-aos="fade-up" src="./img/brand4.png" alt="brand">
           </a>
           <a href="#">
-            <img src="./img/brand5.png" alt="brand">
+            <img data-aos="fade-up" src="./img/brand5.png" alt="brand">
           </a>
           <a href="#">
-            <img src="./img/brand6.png" alt="brand">
+            <img data-aos="fade-up" src="./img/brand6.png" alt="brand">
           </a>
         </div>
       </div>
@@ -765,7 +781,7 @@
           </div>
         </a>
       </div>
-      <div class="menu" id="navbarColapse">
+      <div class="menu">
         <ul>
           <li>
             <a href="#">

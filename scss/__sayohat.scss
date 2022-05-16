@@ -6,6 +6,12 @@ section.sayohat {
     background-repeat: no-repeat;
     background-position: center right;
     background-size: auto 80%;
+
+    @media (max-width: 575px) {
+      padding-top: 70px;
+      padding-bottom: 100px;
+      background-position: center center;
+    }
   }
 
 
@@ -17,6 +23,10 @@ section.sayohat {
     line-height: 50px;
     color: $my_dark;
     margin-bottom: 24px;
+    @media (max-width: 575px) {
+      font-size: 28px;
+      line-height: 36px;
+    }
   }
 
   p {
@@ -28,6 +38,10 @@ section.sayohat {
     color: $my_dark;
     opacity: 0.8;
     margin-bottom: 48px;
+    @media (max-width: 575px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   a {

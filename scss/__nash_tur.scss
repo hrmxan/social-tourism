@@ -1,13 +1,21 @@
 section.nash_tur {
   padding-top: 80px;
   padding-bottom: 80px;
+  @media (max-width: 575px) {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
 
   .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 50px;
-
+    @media (max-width: 575px) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
     h2 {
       font-family: 'my_font';
       font-style: normal;
@@ -15,6 +23,10 @@ section.nash_tur {
       font-size: 42px;
       line-height: 50px;
       color: $my_dark;
+      @media (max-width: 575px) {
+        font-size: 32px;
+        line-height: 40px;
+      }
     }
 
     .button_go {
