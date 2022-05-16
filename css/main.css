@@ -141,7 +141,7 @@ nav .menu ul.menu_links li .link_items:hover::after, nav .menu ul.menu_links li 
     transition: 0.3s;
   }
   nav .menu.show {
-    height: 208px;
+    height: 255px;
     margin-top: 30px;
   }
   nav .menu ul.menu_links {
