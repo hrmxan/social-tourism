@@ -202,8 +202,8 @@ nav {
         display: none;
       }
 
-      width: 40px;
-      height: 30px;
+      width: 36px;
+      height: 24px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -213,7 +213,7 @@ nav {
         transition: 0.3s;
         width: 100%;
         background-color: $my_blue;
-        height: 5px;
+        height: 3px;
         border-radius: 10px;
 
         &:nth-child(1) {
@@ -226,7 +226,7 @@ nav {
 
         span:nth-child(1) {
           width: 100%;
-          transform: rotate(225deg) translateY(-3px);
+          transform: rotate(225deg) translateY(-2px);
         }
 
         span:nth-child(2) {
@@ -234,7 +234,7 @@ nav {
         }
 
         span:nth-child(3) {
-          transform: rotate(-45deg) translateY(-4px);
+          transform: rotate(-45deg) translateY(-2px);
         }
       }
     }

@@ -1,6 +1,7 @@
 footer {
   padding: 0 25px;
 
+
   .container {
     display: flex;
     flex-direction: row;
@@ -18,9 +19,14 @@ footer {
     order: 1;
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    @media (max-width: 991px) {
+      width: 100%;
+    }
 
     img {
-      height: 60px;
+      height: 54px;
       margin-right: 17px;
     }
 
@@ -30,9 +36,9 @@ footer {
       h5 {
         font-family: 'my_font';
         font-style: normal;
-        font-weight: 800;
-        font-size: 14px;
-        line-height: 19px;
+        font-weight: 900;
+        font-size: 10px;
+        line-height: 16px;
         color: $my_dark;
       }
 
@@ -40,8 +46,8 @@ footer {
         font-family: 'my_font';
         font-style: normal;
         font-weight: 500;
-        font-size: 12px;
-        line-height: 19px;
+        font-size: 8px;
+        line-height: 14px;
         color: $my_dark;
       }
     }
@@ -63,15 +69,19 @@ footer {
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 10px 20px;
+          padding: 3px;
           margin-right: 10px;
           font-family: 'my_font';
           font-style: normal;
           font-weight: 600;
-          font-size: 16px;
+          font-size: 14px;
           line-height: 19px;
           color: $my_dark;
           transition: 0.5s;
+
+          &:last-child() {
+            margin-right: 0;
+          }
 
           &:hover {
             color: $my_blue;
@@ -87,22 +97,30 @@ footer {
       align-items: flex-start;
 
       .menu {
-        justify-content: start;
+        width: 100%;
+        justify-content: center;
         margin-top: 40px;
       }
     }
   }
 
-  @media (max-width: 991px) {
+  @media (max-width: 575px) {
     .container {
       flex-direction: column;
       align-items: center;
 
       .menu {
         margin-top: 15px;
+        margin-bottom: 30px;
 
         ul {
           flex-direction: column;
+          li {
+            a {
+              margin-top: 5px;
+              margin-bottom: 5px;
+            }
+          }
         }
       }
     }
@@ -117,11 +135,6 @@ footer {
     justify-content: space-between;
     align-items: center;
     margin-top: 40px;
-
-    @media (max-width: 991px) {
-      justify-content: start;
-      flex-wrap: wrap;
-    }
 
     @media (max-width: 991px) {
       flex-direction: column;
@@ -141,10 +154,9 @@ footer {
 
     @media (max-width: 991px) {
       text-align: center;
-      margin-top: 15px;
       order: 3;
       width: 100%;
-      margin-top: 40px;
+      margin-top: 20px;
     }
   }
 
@@ -155,6 +167,7 @@ footer {
     align-items: center;
     justify-content: center;
     flex-grow: 1;
+    margin-bottom: 20px;
 
     li {
       margin: 0 15px;
@@ -169,25 +182,35 @@ footer {
       border: 1.5px solid rgba($color: $my_dark, $alpha: 0.25);
       border-radius: 50%;
       transition: 0.5s;
+      img {
+        // filter dark
+        filter: invert(0.3);
+        transition: 0.5s;
+      }
+
       &:hover {
         border-color: $my_dark;
+        img {
+          filter: invert(0);
+        }
       }
     }
 
 
     @media (max-width: 991px) {
-      order: 2;
+      order: 1;
       margin-top: 15px;
     }
   }
 
   .razrabota {
     order: 3;
-
-
+    
+    
     @media (max-width: 991px) {
-      margin-top: 0;
-      order: 1;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      order: 2;
     }
   }
 }

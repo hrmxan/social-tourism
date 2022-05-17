@@ -1,6 +1,7 @@
 section.top_cards {
   padding-top: 80px;
   padding-bottom: 80px;
+
   @media (max-width: 575px) {
     padding-top: 40px;
     padding-bottom: 30px;
@@ -185,8 +186,8 @@ section.top_cards {
       align-items: center;
       justify-content: center;
       margin-top: 30px;
-      
-    
+
+
       img {
         width: 40px;
         height: 40px;
@@ -224,6 +225,7 @@ section.top_cards {
           height: 100%;
           transition: 0.5s;
           box-shadow: 0;
+
           &:hover {
             box-shadow: 0 0 15px 2px #0000002e;
           }
@@ -250,6 +252,7 @@ section.top_cards {
     }
   }
 }
+
 @keyframes view_button_ic_90 {
   0% {
     transform: translateY(-5);
@@ -259,5 +262,39 @@ section.top_cards {
   100% {
     transform: translateY(5);
 
+  }
+}
+
+.my_card_body {
+  display: flex;
+  flex-direction: column;
+}
+
+.prosmotr_vse {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'my_font';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: $my_blue;
+
+  img {
+    margin-right: 14px;
+  }
+}
+
+@keyframes view_button_ic {
+  0% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(-5px);
   }
 }
