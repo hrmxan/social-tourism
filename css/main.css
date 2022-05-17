@@ -261,10 +261,6 @@ nav .buttons .colapse_button span {
   border-radius: 10px;
 }
 
-nav .buttons .colapse_button span:nth-child(1) {
-  width: 80%;
-}
-
 nav .buttons .colapse_button.click {
   justify-content: center;
 }
@@ -2962,13 +2958,22 @@ section.aboute {
   outline: none;
 }
 
-.help_form_forms textarea {
+.help_form_forms .textarea {
   width: 100%;
   height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 4px;
   border: 1px solid rgba(4, 28, 53, 0.1);
   padding: 16px;
   margin-bottom: 20px;
+  background-color: #FFFFFF;
+}
+
+.help_form_forms .textarea textarea {
+  width: 100%;
+  height: 100%;
   font-family: 'my_font';
   font-style: normal;
   font-weight: 400;
@@ -2976,13 +2981,14 @@ section.aboute {
   line-height: 17px;
   outline: none;
   resize: none;
+  border: 0;
 }
 
-.help_form_forms textarea::-webkit-scrollbar {
+.help_form_forms .textarea textarea::-webkit-scrollbar {
   width: 0;
 }
 
-.help_form_forms textarea:placeholder {
+.help_form_forms .textarea textarea:placeholder {
   color: rgba(4, 28, 53, 0.5);
 }
 

@@ -215,10 +215,6 @@ nav {
         background-color: $my_blue;
         height: 3px;
         border-radius: 10px;
-
-        &:nth-child(1) {
-          width: 80%;
-        }
       }
 
       &.click {
