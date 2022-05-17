@@ -360,4 +360,35 @@ section.actions {
   }
 }
 
-.mini-modal {}
+.galery_fix {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  top: -100%;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  &.galery_on {
+    top: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+  .galery_close {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
