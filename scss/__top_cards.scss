@@ -53,7 +53,7 @@ section.top_cards {
       h2 {
         font-family: 'my_font';
         font-style: normal;
-        font-weight: bold;
+        font-weight: 800;
         font-size: 36px;
         line-height: 43px;
         text-transform: uppercase;
@@ -114,8 +114,22 @@ section.top_cards {
           display: flex;
           width: 24px;
           height: 24px;
+          border-radius: 4px;
           background-color: #FBC400;
           margin-right: 15px;
+        }
+
+        .value {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          font-family: 'my_font';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+          color: rgba($color: $my_dark, $alpha: 0.7);
         }
 
         &.tip2 {
@@ -217,23 +231,35 @@ section.top_cards {
         margin-bottom: 20px;
       }
 
+      .pays_row {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
       .pays {
-        a {
-          @include my_input;
-          display: flex;
-          width: 100%;
-          height: 100%;
-          transition: 0.5s;
-          box-shadow: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        height: 50px;
+        padding: 10px 16px;
+        transition: 0.5s;
+        box-shadow: 0;
+        background: #F2F6FA;
+        border: 1px solid rgba(4, 28, 53, 0.1);
+        border-radius: 4px;
 
-          &:hover {
-            box-shadow: 0 0 15px 2px #0000002e;
-          }
+        &:hover {
+          box-shadow: 0 0 15px 2px #0000002e;
+        }
 
-          img {
-            object-fit: contain;
-            max-width: 100%;
-          }
+        img {
+          object-fit: contain;
+          max-width: 100%;
         }
       }
 

@@ -251,39 +251,53 @@ try {
 }
 
 let phone_number_input = document.querySelectorAll('.phone_number_input');
-// make inpur phone number mask '+998 (**) ***-**-**'
-let input_in = ['+998 ('];
+
+// phone_number_input.forEach(element => {
+//     element.addEventListener('blur', function (e) {
+//         console.log(e.target.value);
+//     });
+// });
 try {
-    phone_number_input.forEach(element => {
-        element.addEventListener('keyup',  e => {
-            e.target.value = '';
-            let inner_key = parseInt(e.key);
-            if (inner_key >= 0 && inner_key <= 9) {
-                input_in.push(Number(e.key));
-                if (input_in.length > 13) {
-                    input_in.pop();
-                }
-                if (input_in.length === 3) {
-                    input_in.push(') ');
-                }
-                if (input_in.length === 7) {
-                    input_in.push(' ');
-                }
-                if (input_in.length === 10) {
-                    input_in.push(' ');
-                }
-            }
-            if (e.key === 'Backspace' && input_in.length > 1) {
-                input_in.pop();
-            }
-            input_in.forEach(element => {
-                e.target.value += element;
-            });
-        });
-    });
+
 } catch (e) {
     console.log(e);
 }
+
+
+
+// make inpur phone number mask '+998 (**) ***-**-**'
+// let input_in = ['+998 ('];
+// try {
+//     phone_number_input.forEach(element => {
+//         element.addEventListener('keyup',  e => {
+//             e.target.value = '';
+//             let inner_key = parseInt(e.key);
+//             if (inner_key >= 0 && inner_key <= 9) {
+//                 input_in.push(Number(e.key));
+//                 if (input_in.length > 13) {
+//                     input_in.pop();
+//                 }
+//                 if (input_in.length === 3) {
+//                     input_in.push(') ');
+//                 }
+//                 if (input_in.length === 7) {
+//                     input_in.push(' ');
+//                 }
+//                 if (input_in.length === 10) {
+//                     input_in.push(' ');
+//                 }
+//             }
+//             if (e.key === 'Backspace' && input_in.length > 1) {
+//                 input_in.pop();
+//             }
+//             input_in.forEach(element => {
+//                 e.target.value += element;
+//             });
+//         });
+//     });
+// } catch (e) {
+//     console.log(e);
+// }
 let galeryFix = document.getElementById('galeryFix');
 let galeryClose = document.getElementById('galeryClose');
 let galeryFixImg = document.getElementById('galeryFixImg');

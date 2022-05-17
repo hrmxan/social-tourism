@@ -1,6 +1,8 @@
 @font-face {
   font-family: 'my_font';
   src: url("../font/SFProDisplay-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -421,7 +423,7 @@ section.aboute .my_card input {
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  padding: 17px;
+  padding: 16px;
   color: #041C35;
   background: #F2F6FA;
   border: 1px solid rgba(4, 28, 53, 0.1);
@@ -627,7 +629,7 @@ section.top_cards .my_card .sizes p {
 section.top_cards .my_card .sizes h2 {
   font-family: 'my_font';
   font-style: normal;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 36px;
   line-height: 43px;
   text-transform: uppercase;
@@ -749,8 +751,22 @@ section.top_cards .my_card .tips .tip .color {
   display: flex;
   width: 24px;
   height: 24px;
+  border-radius: 4px;
   background-color: #FBC400;
   margin-right: 15px;
+}
+
+section.top_cards .my_card .tips .tip .value {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'my_font';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(4, 28, 53, 0.7);
 }
 
 section.top_cards .my_card .tips .tip.tip2 .color {
@@ -842,7 +858,7 @@ section.top_cards .my_card form .my_select {
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  padding: 17px;
+  padding: 16px;
   color: #041C35;
   background: #F2F6FA;
   border: 1px solid rgba(4, 28, 53, 0.1);
@@ -862,40 +878,34 @@ section.top_cards .my_card form .my_select a {
   color: #041C35;
 }
 
-section.top_cards .my_card form .pays a {
-  outline: none;
-  border: none;
-  font-family: 'my_font';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  padding: 17px;
-  color: #041C35;
+section.top_cards .my_card form .pays_row {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+section.top_cards .my_card form .pays {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 50px;
+  padding: 10px 16px;
+  transition: 0.5s;
+  box-shadow: 0;
   background: #F2F6FA;
   border: 1px solid rgba(4, 28, 53, 0.1);
   border-radius: 4px;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: 0.5s;
-  box-shadow: 0;
 }
 
-section.top_cards .my_card form .pays a a {
-  font-family: 'my_font';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #041C35;
-}
-
-section.top_cards .my_card form .pays a:hover {
+section.top_cards .my_card form .pays:hover {
   box-shadow: 0 0 15px 2px #0000002e;
 }
 
-section.top_cards .my_card form .pays a img {
+section.top_cards .my_card form .pays img {
   object-fit: contain;
   max-width: 100%;
 }
@@ -1374,7 +1384,7 @@ section.nash_tur .top {
 section.nash_tur .top h2 {
   font-family: 'my_font';
   font-style: normal;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 42px;
   line-height: 50px;
   color: #041C35;
@@ -1509,7 +1519,7 @@ section.sayohat .container {
 section.sayohat h3 {
   font-family: 'my_font';
   font-style: normal;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 42px;
   line-height: 50px;
   color: #041C35;
@@ -1584,7 +1594,7 @@ section.reportaj .top {
 section.reportaj .top h2 {
   font-family: 'my_font';
   font-style: normal;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 42px;
   line-height: 50px;
   color: #041C35;
@@ -1666,9 +1676,9 @@ section.reportaj .video_cards .video_card .text span {
 section.reportaj .video_cards .video_card .text p {
   font-family: 'my_font';
   font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
   color: #FFFFFF;
 }
 
@@ -1720,7 +1730,7 @@ section.yangiliklar .top {
 section.yangiliklar .top h2 {
   font-family: 'my_font';
   font-style: normal;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 42px;
   line-height: 50px;
   color: #041C35;
