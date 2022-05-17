@@ -1103,12 +1103,12 @@ section.actions.fix_on {
 }
 
 @media (max-width: 500px) {
-  .my_fixed_card .krestik {
+  .my_fixed_card .krestik.krestik-mini-modal {
     top: 10px;
     left: initial;
     right: 25px;
   }
-  .my_fixed_card .krestik img {
+  .my_fixed_card .krestik.krestik-mini-modal img {
     filter: invert(1);
   }
 }
@@ -2363,6 +2363,30 @@ section.aboute {
   margin-bottom: 20px;
 }
 
+@media (max-width: 575px) {
+  .simple_line_sircule .sircule_icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+  }
+}
+
+.simple_line_sircule strong {
+  font-family: 'my_font';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #041C35;
+}
+
+@media (max-width: 575px) {
+  .simple_line_sircule strong {
+    display: none;
+  }
+}
+
 .simple_line {
   display: flex;
   flex-direction: row;
@@ -2380,7 +2404,14 @@ section.aboute {
   z-index: -1;
   top: 32px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 575px) {
+  .simple_line .inner_line {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .sections_tops {
@@ -2935,6 +2966,7 @@ section.aboute {
 
 .file_send_input .kok_buttons:hover img {
   transform: scale(1.1);
+  filter: invert(0.2) sepia(50%) saturate(50%) hue-rotate(0deg) brightness(50%) contrast(50%);
 }
 
 .file_send_input .text_about {

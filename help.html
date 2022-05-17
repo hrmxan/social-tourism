@@ -96,52 +96,54 @@
 
   <main>
     <div class="container">
-      <h1 class="help_title">
+      <h1 data-aos="fade-right" class="help_title">
         Нужен помошь
       </h1>
-      <section class="help_form">
-        <div class="row help_form_row">
-          <div class="col-12 col-md-8 col-lg-6">
-            <p class="help_context">
-              Заполните свои данные и мы свяжемся с вами в ближайшее время,
-              и постараемся делать <span>вашу мечту в реальность</span>
-            </p>
-            <div class="row help_form_forms">
-              <div class="col-12 col-sm-6">
-                <input type="text" placeholder="ФИО">
-              </div>
-              <div class="col-12 col-sm-6">
-                <input type="number" placeholder="+998 (--) --- -- --">
-              </div>
-              <div class="col12">
-                <textarea name="help" placeholder="Напишите свою боль"></textarea>
-              </div>
-              <div class="col-12">
-                <label class="file_send_input" for="fileSend">
-                  <div class="text_about">
-                    <p>Загрузите или перетащите сюда свои файлы</p>
-                    <strong>jpg, png, pdf, doc • up to 10 mb</strong>
-                  </div>
-                  <span class="kok_buttons mute_buttons">
-                    <img src="./img/svg/file.svg" alt="file">
-                    Загрузить
-                  </span>
-                  <input id="fileSend" type="file">
-                </label>
+      <form>
+        <section class="help_form">
+          <div class="row help_form_row">
+            <div class="col-12 col-md-8 col-lg-6">
+              <p data-aos="fade-up" class="help_context">
+                Заполните свои данные и мы свяжемся с вами в ближайшее время,
+                и постараемся делать <span>вашу мечту в реальность</span>
+              </p>
+              <div class="row help_form_forms">
+                <div data-aos="fade-up" class="col-12 col-sm-6">
+                  <input type="text" placeholder="ФИО">
+                </div>
+                <div data-aos="fade-up" class="col-12 col-sm-6">
+                  <input type="number" placeholder="+998 (--) --- -- --">
+                </div>
+                <div data-aos="fade-up" class="col12">
+                  <textarea name="help" placeholder="Напишите свою боль"></textarea>
+                </div>
+                <div data-aos="fade-up" class="col-12">
+                  <label class="file_send_input" for="fileSend">
+                    <div class="text_about">
+                      <p>Загрузите или перетащите сюда свои файлы</p>
+                      <strong>jpg, png, pdf, doc • up to 10 mb</strong>
+                    </div>
+                    <span class="kok_buttons">
+                      <img src="./img/svg/file.svg" alt="file">
+                      Загрузить
+                    </span>
+                    <input id="fileSend" type="file">
+                  </label>
+                </div>
               </div>
             </div>
           </div>
+        </section>
+        <div data-aos="fade-up" class="help_sent_button">
+          <a href="#" class="kok_buttons mute_buttons">
+            Отправить
+          </a>
         </div>
-      </section>
-      <div class="help_sent_button">
-        <a href="#" class="kok_buttons">
-          Отправить
-        </a>
-      </div>
+      </form>
     </div>
   </main>
 
-  <footer>
+  <footer  data-aos="fade-up">
     <div class="container nav_bar d-flex">
       <div class="logo">
         <a href="#" class="d-flex flex-row">
@@ -161,7 +163,12 @@
           </li>
           <li>
             <a href="#">
-              Нужен помошь
+              Контакты
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Наши туры
             </a>
           </li>
           <li>
@@ -171,9 +178,11 @@
           </li>
           <li>
             <a href="#">
-              Наши туры
+              Нужен помошь
             </a>
           </li>
+          
+          
         </ul>
       </div>
       <div class="bottom">
@@ -203,7 +212,7 @@
           </li>
         </ul>
         <a class="razrabota" href="#">
-          <img src="./img/svg/razrabota.svg">
+          <img src="./img/svg/rteco.svg">
         </a>
       </div>
     </div>

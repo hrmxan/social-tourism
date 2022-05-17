@@ -230,3 +230,16 @@ try {
 } catch (e) {
     console.log(e);
 }
+let fileSend = document.getElementById('fileSend');
+let file_send_title;
+
+try {
+    fileSend.addEventListener('change', function (e) {
+        file_send_title = e.target.parentElement.childNodes[1].childNodes[3];
+        if (e.target.files.length > 0) {
+            file_send_title.innerHTML = e.target.files[0].name;
+        }
+    });
+} catch (e) {
+    console.log(e);
+}

@@ -147,14 +147,18 @@ section.actions {
     left: 100%;
     transform: translateX(15px);
 
-    @media (max-width: 500px) {
-      top: 10px;
-      left: initial;
-      right: 25px;
-      img {
-        filter: invert(1);
+    &.krestik-mini-modal {
+      @media (max-width: 500px) {
+        top: 10px;
+        left: initial;
+        right: 25px;
+
+        img {
+          filter: invert(1);
+        }
       }
     }
+
   }
 
 
