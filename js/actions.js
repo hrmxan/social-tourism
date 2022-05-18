@@ -8,8 +8,7 @@ try {
         colapseButton.classList.toggle('click');
         navbarColapse.classList.toggle('show');
     });
-}
-catch (e) {
+} catch (e) {
     console.log(e);
 }
 
@@ -23,8 +22,7 @@ try {
             element.classList.toggle('played');
         });
     });
-}
-catch (error) {
+} catch (error) {
     console.log(error);
 }
 
@@ -35,8 +33,7 @@ try {
             video.play();
         });
     });
-}
-catch (e) {
+} catch (e) {
     console.log(e);
 }
 
@@ -47,8 +44,7 @@ try {
             video.pause();
         });
     });
-}
-catch (e) {
+} catch (e) {
     console.log(e);
 }
 
@@ -61,8 +57,7 @@ try {
     languageId.addEventListener('click', function () {
         languageId.classList.toggle('opened');
     });
-}
-catch (e) {
+} catch (e) {
     console.log(e);
 }
 
@@ -72,8 +67,7 @@ try {
             langVal.innerHTML = e.target.innerHTML;
         });
     })
-}
-catch (e) {
+} catch (e) {
     console.log(e);
 }
 
@@ -85,8 +79,7 @@ try {
             e.target.parentElement.classList.toggle('opened')
         });
     });
-}
-catch (e) {
+} catch (e) {
     console.log(e);
 }
 
@@ -101,8 +94,7 @@ try {
             this.classList.add('active');
         });
     });
-}
-catch (e) {
+} catch (e) {
     console.log(e);
 }
 
@@ -116,12 +108,12 @@ let kupitTurSum = document.getElementById('kupitTurSum');
 let buyYurDate = document.getElementById('buyYurDate');
 let delayDobroCard = document.getElementById('delayDobroCard');
 
-function action_on () {
+function action_on() {
     actions.classList.add('fix_on');
     document.body.style.overflow = 'hidden';
 }
 
-function action_off () {
+function action_off() {
     actions.classList.remove('fix_on');
     document.body.style.overflow = 'auto';
 }
@@ -211,8 +203,7 @@ try {
             videoCNeyBody.classList.remove('video_play');
         });
     });
-}
-catch (e) {
+} catch (e) {
     console.log(e);
 }
 let my_selects = document.querySelectorAll('.my_selects');
@@ -253,26 +244,33 @@ try {
 
 let phone_number_input = document.querySelectorAll('.phone_number_input');
 
-try {
-    phone_number_input.forEach(element => {
-        element.addEventListener('focus', function (e) {
-            e.target.value = '9';
-        });
-        element.addEventListener('keyup', function (e) {
-            let x = [];
-            if (Number.isInteger(parseInt(e.key))) {
-              x = e.target.value.replace(/\D/g, '').match(/(\d{2})(\d{3})(\d{2})(\d{2})/);
-               if (x) e.target.value = '+998 (' + x[1] + ') ' + x[2] + '-' + x[3] + '-' + x[4];
-            }
-            else {
-                let harf = e.key;
-                e.target.value = e.target.value.replace(harf, '');
-            }
-        });
+phone_number_input.forEach(element => {
+    element.addEventListener('input', function (e) {
+        let tel = element;
+        let maskOptions = {
+            phone: {
+                mask: "+{998}(00)000-00-00",
+                lazy: true,
+                placeholderChar: "-",
+            },
+        };
+        if (tel) {
+            let mask = IMask(tel, maskOptions.phone);
+        }
     });
-} catch (e) {
-    console.log(e);
-}
+});
+
+// let tel = document.getElementById("selector");
+// let maskOptions = {
+//     phone: {
+//         mask: "+{998}(00)000-00-00",
+//         lazy: false,
+//         placeholderChar: "-",
+//     },
+// };
+// if (tel) {
+//     let mask = IMask(tel, maskOptions.phone);
+// }
 
 
 
@@ -290,9 +288,9 @@ try {
     img_link_card.forEach(element => {
         element.addEventListener('click', function (e) {
             // e.target.parentElement.childNodes[1].getAttribute('src')
-            
+
             console.log(galeryFixImg.setAttribute('src', e.target.parentElement.childNodes[1].getAttribute('src')));
-            
+
             action_on();
             galeryFix.classList.add('galery_on');
         });

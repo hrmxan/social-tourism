@@ -326,6 +326,7 @@ section.actions {
     opacity: 0;
     transform: translateY(-5px);
     transition: 0.5s;
+    overflow: hidden;
 
     a.my_select_items {
       display: flex;

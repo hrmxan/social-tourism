@@ -200,9 +200,7 @@ nav .buttons .my_btn.btn2 ul {
 }
 
 nav .buttons .my_btn.btn2 ul li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   width: 100%;
 }
 
@@ -1283,6 +1281,7 @@ section.actions.fix_on {
   opacity: 0;
   transform: translateY(-5px);
   transition: 0.5s;
+  overflow: hidden;
 }
 
 .my_selects .my_select_body a.my_select_items {
