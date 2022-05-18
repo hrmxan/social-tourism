@@ -237,8 +237,6 @@ try {
     console.log(e);
 }
 let fileSend = document.getElementById('fileSend');
-let file_send_title;
-
 try {
     fileSend.addEventListener('change', function (e) {
         file_send_title = e.target.parentElement.childNodes[1].childNodes[3];
@@ -250,54 +248,34 @@ try {
     console.log(e);
 }
 
+
+
+
 let phone_number_input = document.querySelectorAll('.phone_number_input');
 
-// phone_number_input.forEach(element => {
-//     element.addEventListener('blur', function (e) {
-//         console.log(e.target.value);
-//     });
-// });
 try {
-
+    phone_number_input.forEach(element => {
+        element.addEventListener('focus', function (e) {
+            e.target.value = '9';
+        });
+        element.addEventListener('keyup', function (e) {
+            let x = [];
+            if (Number.isInteger(parseInt(e.key))) {
+              x = e.target.value.replace(/\D/g, '').match(/(\d{2})(\d{3})(\d{2})(\d{2})/);
+               if (x) e.target.value = '+998 (' + x[1] + ') ' + x[2] + '-' + x[3] + '-' + x[4];
+            }
+            else {
+                let harf = e.key;
+                e.target.value = e.target.value.replace(harf, '');
+            }
+        });
+    });
 } catch (e) {
     console.log(e);
 }
 
 
 
-// make inpur phone number mask '+998 (**) ***-**-**'
-// let input_in = ['+998 ('];
-// try {
-//     phone_number_input.forEach(element => {
-//         element.addEventListener('keyup',  e => {
-//             e.target.value = '';
-//             let inner_key = parseInt(e.key);
-//             if (inner_key >= 0 && inner_key <= 9) {
-//                 input_in.push(Number(e.key));
-//                 if (input_in.length > 13) {
-//                     input_in.pop();
-//                 }
-//                 if (input_in.length === 3) {
-//                     input_in.push(') ');
-//                 }
-//                 if (input_in.length === 7) {
-//                     input_in.push(' ');
-//                 }
-//                 if (input_in.length === 10) {
-//                     input_in.push(' ');
-//                 }
-//             }
-//             if (e.key === 'Backspace' && input_in.length > 1) {
-//                 input_in.pop();
-//             }
-//             input_in.forEach(element => {
-//                 e.target.value += element;
-//             });
-//         });
-//     });
-// } catch (e) {
-//     console.log(e);
-// }
 let galeryFix = document.getElementById('galeryFix');
 let galeryClose = document.getElementById('galeryClose');
 let galeryFixImg = document.getElementById('galeryFixImg');
