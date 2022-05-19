@@ -195,8 +195,20 @@ nav .buttons .my_btn.btn2 {
 }
 
 nav .buttons .my_btn.btn2 ul {
-  display: none;
+  position: absolute;
+  display: flex;
   background-color: #FFFFFF;
+  flex-direction: column;
+  align-items: center;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: 2px solid #2A85E3;
+  border-radius: 50px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
 }
 
 nav .buttons .my_btn.btn2 ul li {
@@ -204,20 +216,7 @@ nav .buttons .my_btn.btn2 ul li {
   width: 100%;
 }
 
-nav .buttons .my_btn.btn2.opened ul {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, 10px);
-  border: 2px solid #2A85E3;
-  border-radius: 50px;
-  overflow: hidden;
-}
-
-nav .buttons .my_btn.btn2.opened ul a {
+nav .buttons .my_btn.btn2 ul a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -225,9 +224,15 @@ nav .buttons .my_btn.btn2.opened ul a {
   padding: 16px 24px;
 }
 
-nav .buttons .my_btn.btn2.opened ul a:hover {
+nav .buttons .my_btn.btn2 ul a:hover {
   color: #FFFFFF;
   background-color: #2A85E3;
+}
+
+nav .buttons .my_btn.btn2.opened ul {
+  transform: translate(-50%, 10px);
+  opacity: 1;
+  visibility: visible;
 }
 
 nav .buttons .my_btn:hover {
@@ -314,12 +319,14 @@ section.aboute .content h1 {
   line-height: 54px;
   color: #041C35;
   margin-bottom: 20px;
+  padding-top: 88px;
 }
 
 @media (max-width: 575px) {
   section.aboute .content h1 {
     font-size: 32px;
     line-height: 40px;
+    padding-top: 20px;
   }
 }
 
@@ -442,9 +449,9 @@ section.aboute .my_card .line {
   margin-bottom: 14px;
 }
 
-section.aboute .my_card .line::before {
+section.aboute .my_card .line span {
   content: '';
-  width: 40%;
+  width: 0%;
   height: 3px;
   position: absolute;
   top: 50%;
@@ -819,6 +826,12 @@ section.top_cards .my_card .button_go {
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+  font-family: 'my_font';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2A85E3;
 }
 
 section.top_cards .my_card .button_go img {

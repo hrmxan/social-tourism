@@ -21,9 +21,11 @@ section.aboute {
       line-height: 54px;
       color: $my_dark;
       margin-bottom: 20px;
+      padding-top: 88px;
       @media (max-width: 575px) {
         font-size: 32px;
         line-height: 40px;
+        padding-top: 20px;
       }
     }
 
@@ -116,9 +118,9 @@ section.aboute {
       background-color: rgba($color: #52BB63, $alpha: 0.2);
       margin-bottom: 14px;
 
-      &::before {
+      span {
         content: '';
-        width: 40%;
+        width: 0%;
         height: 3px;
         position: absolute;
         top: 50%;

@@ -181,7 +181,7 @@ let videoCNeyBody;
 let my_carousel_section = document.querySelectorAll('.my_carousel_section');
 let my_carousel_item_video = document.querySelectorAll('.my_carousel_item_video');
 
-function ClearVideo () {
+function ClearVideo() {
     my_carousel_item_video.forEach(element => {
         element.pause();
         element.currentTime = 0;
@@ -196,13 +196,13 @@ try {
         element.addEventListener('click', function (e) {
             element.preventDefault;
             ClearVideo();
-            my_carousel_section.forEach(e=>{
-                if (e.getAttribute('data-hrm-play') == element.getAttribute('data-hrm-play')){
+            my_carousel_section.forEach(e => {
+                if (e.getAttribute('data-hrm-play') == element.getAttribute('data-hrm-play')) {
                     e.classList.add('video_play')
                 }
             });
-            my_carousel_item_video.forEach(e=>{
-                if (e.getAttribute('data-hrm-play') == element.getAttribute('data-hrm-play')){
+            my_carousel_item_video.forEach(e => {
+                if (e.getAttribute('data-hrm-play') == element.getAttribute('data-hrm-play')) {
                     setTimeout(() => {
                         e.play();
                     }, 500);
@@ -219,7 +219,7 @@ let stop_video_play = document.querySelectorAll('.stop_video_play');
 try {
     stop_video_play.forEach(element => {
         element.addEventListener('click', function (e) {
-           ClearVideo();
+            ClearVideo();
         });
     });
 } catch (e) {
@@ -259,24 +259,57 @@ try {
 }
 
 
+// masks
 
+try {
+    let phone_number_input = document.querySelectorAll('.phone_number_input');
 
-let phone_number_input = document.querySelectorAll('.phone_number_input');
-
-phone_number_input.forEach(element => {
-    element.addEventListener('input', function (e) {
+    phone_number_input.forEach(element => {
         let maskOptions = {
             phone: {
-                mask: "+998 (00) 000-00-00",
+                mask: "+998 (00) 000 00 00",
                 lazy: false,
                 placeholderChar: "-",
             },
         };
         if (element) {
-            let mask = IMask(element, maskOptions.phone);
+            IMask(element, maskOptions.phone);
         }
     });
-});
+
+
+    let card_number_mask = document.querySelectorAll('.card_number_mask');
+    card_number_mask.forEach(element => {
+        let maskOptions = {
+            card: {
+                mask: "0000-0000-0000-0000",
+                lazy: true,
+                placeholderChar: " _ ",
+            },
+        };
+        if (element) {
+            IMask(element, maskOptions.card)
+        }
+    });
+
+    let min_max_mask = document.querySelectorAll('.min_max_mask');
+
+    min_max_mask.forEach(element => {
+        let maskOptions = {
+            min_max: {
+                mask: Number,
+                min: 5000,
+                max: 4500000,
+                thousandsSeparator: '  '
+            },
+        };
+        if (element) {
+            IMask(element, maskOptions.min_max);
+        }
+    });
+} catch (e) {
+    console.log(e);
+}
 
 // let tel = document.getElementById("selector");
 // let maskOptions = {
@@ -318,16 +351,47 @@ try {
 }
 
 // carousel
-const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: false,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+try {
+    const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: false,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+} catch (e) {
+    console.log(e);
+}
+try {
+    let car_sum = document.querySelectorAll('.car_sum');
+    let sums = document.querySelectorAll('.sums');
+    let line = document.querySelectorAll('.line');
+    car_sum.forEach(element => {
+        element.addEventListener('input', function (e) {
+            let max;
+            let min;
+            let prots;
+            sums.forEach(e => {
+                if (e.getAttribute('data-sum') == element.getAttribute('data-sum')) {
+                    e.childNodes[3].childNodes[1].innerHTML = element.value;
+                    min = parseInt(e.childNodes[3].childNodes[1].innerHTML.replaceAll(' ', ''));
+                    max = parseInt(e.childNodes[5].childNodes[1].innerHTML.replaceAll(' ', ''));
+                }
+            });
+            line.forEach(e => {
+                if (e.getAttribute('data-sum') == element.getAttribute('data-sum')) {
+                    prots = (min * 100) / max;
+                    e.childNodes[1].style.width = prots + '%';
+                }
+            });
+        });
+    });
+} catch (e) {
+    console.log(e);
+}

@@ -200,6 +200,12 @@ section.top_cards {
       align-items: center;
       justify-content: center;
       margin-top: 30px;
+      font-family: 'my_font';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      color: $my_blue;
 
 
       img {
