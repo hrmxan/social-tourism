@@ -2221,15 +2221,15 @@ section.aboute {
   animation-duration: 0.5s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
+  animation-direction: alternate;
 }
 
 @keyframes view_button_ic {
   0% {
-    transform: translateX(5px);
+    transform: translateX(0px);
   }
   100% {
-    transform: translateX(-5px);
+    transform: translateX(5px);
   }
 }
 
