@@ -181,22 +181,33 @@ let videoCNeyBody;
 let my_carousel_section = document.querySelectorAll('.my_carousel_section');
 let my_carousel_item_video = document.querySelectorAll('.my_carousel_item_video');
 
+function ClearVideo () {
+    my_carousel_item_video.forEach(element => {
+        element.pause();
+        element.currentTime = 0;
+        my_carousel_section.forEach(element => {
+            element.classList.remove('video_play');
+        });
+    });
+}
+
 try {
     play_buttos_c_ney.forEach(element => {
         element.addEventListener('click', function (e) {
-            my_carousel_section.forEach(element => {
-                element.classList.remove('video_play');
+            element.preventDefault;
+            ClearVideo();
+            my_carousel_section.forEach(e=>{
+                if (e.getAttribute('data-hrm-play') == element.getAttribute('data-hrm-play')){
+                    e.classList.add('video_play')
+                }
             });
-            videoCNeyBody = e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
-            videoCNeyBody.classList.add('video_play');
-            videoCNey = videoCNeyBody.childNodes[1];
-            my_carousel_item_video.forEach(element => {
-                element.pause();
-                element.currentTime = 0;
+            my_carousel_item_video.forEach(e=>{
+                if (e.getAttribute('data-hrm-play') == element.getAttribute('data-hrm-play')){
+                    setTimeout(() => {
+                        e.play();
+                    }, 500);
+                }
             });
-            setTimeout(function () {
-                videoCNey.play();
-            }, 500);
         });
     });
 } catch (e) {
@@ -208,13 +219,7 @@ let stop_video_play = document.querySelectorAll('.stop_video_play');
 try {
     stop_video_play.forEach(element => {
         element.addEventListener('click', function (e) {
-            my_carousel_section.forEach(element => {
-                element.classList.remove('video_play');
-            });
-            my_carousel_item_video.forEach(element => {
-                element.pause();
-                element.currentTime = 0;
-            });
+           ClearVideo();
         });
     });
 } catch (e) {
@@ -316,7 +321,7 @@ try {
 const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
-    loop: true,
+    loop: false,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

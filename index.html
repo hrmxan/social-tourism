@@ -126,9 +126,9 @@
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide my_carousel_item">
-            <section class="my_carousel_section position-relative">
-              <video class="my_carousel_item_video" src="./video/video1.mp4" poster="./img/video_bg.png"></video>
-              <a class="stop_video_play mute_buttons" href="#">
+            <section data-hrm-play="1" class="my_carousel_section position-relative">
+              <video data-hrm-play="1" class="my_carousel_item_video" src="./video/video1.mp4" poster="./img/video_bg.png"></video>
+              <a data-hrm-play="1" class="stop_video_play mute_buttons" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stop-circle" viewBox="0 0 16 16">
                   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                   <path d="M5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3z"/>
@@ -143,8 +143,8 @@
                     Она тоже хочет путешествовать мир,
                     как нас
                   </p>
-                  <div class="play_buttos_c_ney play_button">
-                    <a href="#" class="mute_buttons button_go">
+                  <div class="play_button">
+                    <a data-hrm-play="1" href="#" class="play_buttos_c_ney mute_buttons button_go">
                       <img src="./img/svg/play_button.svg" alt="play">
                       Посмотреть видео о ней
                     </a>
@@ -198,9 +198,9 @@
             </section>
           </div>
           <div class="swiper-slide my_carousel_item">
-            <section class="my_carousel_section position-relative">
-              <video class="my_carousel_item_video" src="./video/video1.mp4" poster="./img/video_bg.png"></video>
-              <a class="stop_video_play mute_buttons" href="#">
+            <section data-hrm-play="2" class="my_carousel_section position-relative">
+              <video data-hrm-play="2" class="my_carousel_item_video" src="./video/video1.mp4" poster="./img/video_bg.png"></video>
+              <a data-hrm-play="2" class="stop_video_play mute_buttons" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stop-circle" viewBox="0 0 16 16">
                   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                   <path d="M5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3z"/>
@@ -215,8 +215,8 @@
                     Она тоже хочет путешествовать мир,
                     как нас
                   </p>
-                  <div class="play_buttos_c_ney play_button">
-                    <a href="#" class="mute_buttons button_go">
+                  <div class="play_button">
+                    <a data-hrm-play="2" href="#" class="play_buttos_c_ney mute_buttons button_go">
                       <img src="./img/svg/play_button.svg" alt="play">
                       Посмотреть видео о ней
                     </a>
@@ -270,9 +270,9 @@
             </section>
           </div>
           <div class="swiper-slide my_carousel_item">
-            <section class="my_carousel_section position-relative">
-              <video class="my_carousel_item_video" src="./video/video1.mp4" poster="./img/video_bg.png"></video>
-              <a class="stop_video_play mute_buttons" href="#">
+            <section data-hrm-play="3" class="my_carousel_section position-relative">
+              <video data-hrm-play="3" class="my_carousel_item_video" src="./video/video1.mp4" poster="./img/video_bg.png"></video>
+              <a data-hrm-play="3" class="stop_video_play mute_buttons" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stop-circle" viewBox="0 0 16 16">
                   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                   <path d="M5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3z"/>
@@ -287,8 +287,8 @@
                     Она тоже хочет путешествовать мир,
                     как нас
                   </p>
-                  <div class="play_buttos_c_ney play_button">
-                    <a class="button_go mute_buttons">
+                  <div class="play_button">
+                    <a data-hrm-play="3" href="#" class="play_buttos_c_ney button_go mute_buttons">
                       <img src="./img/svg/play_button.svg" alt="play">
                       Посмотреть видео о ней
                     </a>
@@ -349,232 +349,6 @@
           <div class="swiper-pagination"></div>
           <div class="swiper-button-next">
             <img src="./img/svg/right.svg">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="proba aboute d-none">
-      <div class="video_show container">
-        <video src="./video/video1.mp4" poster="./img/video_bg.png">
-        </video>
-        <a class="stop_video_play mute_buttons" href="#">
-        </a>
-      </div>
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="fade-up">
-        <div class="carousel-inner">
-          <div class="carousel-item active my_carousel_item">
-            <video class="my_carousel_item_video" src="./video/video1.mp4" poster="./img/video_bg.png"></video>
-            <div class="container my_carousel_item_body">
-              <div class="content">
-                <h1>
-                  Я тоже хочу путешествовать мир, как здоровые люди
-                </h1>
-                <p>
-                  Она тоже хочет путешествовать мир,
-                  как нас
-                </p>
-                <div class="play_buttos_c_ney play_button">
-                  <a href="#" class="button_go mute_buttons">
-                    <img src="./img/svg/play_button.svg" alt="play">
-                    Посмотреть видео о ней
-                  </a>
-                </div>
-              </div>
-              <div class="row aboute_content">
-                <div class="col-12 col-sm-10 col-xl-8">
-                  <div class="my_card">
-                    <form>
-                      <div class="row">
-                        <div class="col-12 mb-3 mb-lg-0 col-lg-4 d-flex flex-column">
-                          <div class="text">
-                            <p>
-                              Пожертвования для
-                            </p>
-                            <strong>
-                              Айгуль Темировой
-                            </strong>
-
-                          </div>
-                          <input type="number" placeholder="Номер карты">
-                        </div>
-                        <div class="col-12 col-lg-8 d-flex flex-column justify-content-between">
-                          <div class="sums">
-                            <span class="line"></span>
-                            <strong class="min">
-                              2 105 000 сум
-                            </strong>
-                            <strong class="max">
-                              4 500 000 сум
-                            </strong>
-                          </div>
-                          <div class="row mt-2 mt-lg-0">
-                            <div class="col-12 col-lg-7 d-flex flex-column justify-content-end">
-                              <input class="w-100" type="number" placeholder="Сумма">
-                            </div>
-                            <div class="col-12 col-lg-5 d-flex align-content-between justify-content-end mt-2 mt-lg-0">
-                              <button type="submit" class="submin_sum kok_buttons delayu_dobro mute_buttons">
-                                Делать добро
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-          <div class="carousel-item my_carousel_item">
-            <video class="my_carousel_item_video" src="./video/video1.mp4" poster="./img/video_bg.png"></video>
-            <div class="container my_carousel_item_body">
-              <div class="content">
-                <h1>
-                  Я тоже хочу путешествовать мир, как здоровые люди
-                </h1>
-                <p>
-                  Она тоже хочет путешествовать мир,
-                  как нас
-                </p>
-                <div class="play_buttos_c_ney play_button">
-                  <a href="#" class="button_go mute_buttons">
-                    <img src="./img/svg/play_button.svg" alt="play">
-                    Посмотреть видео о ней
-                  </a>
-                </div>
-              </div>
-              <div class="row aboute_content">
-                <div class="col-12 col-sm-10 col-xl-8">
-                  <div class="my_card">
-                    <form>
-                      <div class="row">
-                        <div class="col-12 mb-3 mb-lg-0 col-lg-4 d-flex flex-column">
-                          <div class="text">
-                            <p>
-                              Пожертвования для
-                            </p>
-                            <strong>
-                              Айгуль Темировой
-                            </strong>
-
-                          </div>
-                          <input type="number" placeholder="Номер карты">
-                        </div>
-                        <div class="col-12 col-lg-8 d-flex flex-column justify-content-between">
-                          <div class="sums">
-                            <span class="line"></span>
-                            <strong class="min">
-                              2 105 000 сум
-                            </strong>
-                            <strong class="max">
-                              4 500 000 сум
-                            </strong>
-                          </div>
-                          <div class="row mt-2 mt-lg-0">
-                            <div class="col-12 col-lg-7 d-flex flex-column justify-content-end">
-                              <input class="w-100" type="number" placeholder="Сумма">
-                            </div>
-                            <div class="col-12 col-lg-5 d-flex align-content-between justify-content-end mt-2 mt-lg-0">
-                              <button type="submit" class="submin_sum kok_buttons delayu_dobro mute_buttons">
-                                Делать добро
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-          <div class="carousel-item my_carousel_item">
-            <video class="my_carousel_item_video" src="./video/video1.mp4" poster="./img/video_bg.png"></video>
-            <div class="container my_carousel_item_body">
-              <div class="content">
-                <h1>
-                  Я тоже хочу путешествовать мир, как здоровые люди
-                </h1>
-                <p>
-                  Она тоже хочет путешествовать мир,
-                  как нас
-                </p>
-                <div class="play_buttos_c_ney play_button">
-                  <a href="#" class="button_go">
-                    <img src="./img/svg/play_button.svg" alt="play">
-                    Посмотреть видео о ней
-                  </a>
-                </div>
-              </div>
-              <div class="row aboute_content">
-                <div class="col-12 col-sm-10 col-xl-8">
-                  <div class="my_card">
-                    <form>
-                      <div class="row">
-                        <div class="col-12 mb-3 mb-lg-0 col-lg-4 d-flex flex-column">
-                          <div class="text">
-                            <p>
-                              Пожертвования для
-                            </p>
-                            <strong>
-                              Айгуль Темировой
-                            </strong>
-
-                          </div>
-                          <input type="number" placeholder="Номер карты">
-                        </div>
-                        <div class="col-12 col-lg-8 d-flex flex-column justify-content-between">
-                          <div class="sums">
-                            <span class="line"></span>
-                            <strong class="min">
-                              2 105 000 сум
-                            </strong>
-                            <strong class="max">
-                              4 500 000 сум
-                            </strong>
-                          </div>
-                          <div class="row mt-2 mt-lg-0">
-                            <div class="col-12 col-lg-7 d-flex flex-column justify-content-end">
-                              <input class="w-100" type="number" placeholder="Сумма">
-                            </div>
-                            <div class="col-12 col-lg-5 d-flex align-content-between justify-content-end mt-2 mt-lg-0">
-                              <button type="submit" class="submin_sum kok_buttons delayu_dobro mute_buttons">
-                                Делать добро
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="my_carousel_indicator">
-
-            <div id="pageController" class="page_controllers">
-              <a href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <img src="./img/svg/left.svg" alt="left">
-              </a>
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              </ol>
-              <a href="#carouselExampleIndicators" role="button" data-slide="next">
-                <img src="./img/svg/right.svg" alt="right">
-              </a>
-            </div>
           </div>
         </div>
       </div>
