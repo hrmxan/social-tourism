@@ -2105,7 +2105,6 @@ section.aboute {
 
 .my_carousel_item {
   position: relative;
-  padding-top: 88px;
 }
 
 @media (max-width: 575px) {
@@ -2116,7 +2115,14 @@ section.aboute {
 
 .my_carousel_item_body {
   position: relative;
+  padding-bottom: 20px;
   z-index: 10;
+}
+
+@media (max-width: 991px) {
+  .my_carousel_item_body {
+    padding-bottom: 0;
+  }
 }
 
 .my_carousel_item_video {
@@ -2127,77 +2133,78 @@ section.aboute {
   height: 100%;
   object-fit: cover;
   border-radius: 0 0 0 40px;
+  transition: 0.5s;
 }
 
 @media (max-width: 991px) {
   .my_carousel_item_video {
     display: none;
+    width: 0;
     visibility: hidden;
   }
 }
 
-.aboute .carousel {
-  visibility: visible;
-  opacity: 1;
-  transition: 0.5s;
-}
-
-.aboute .video_show {
-  position: absolute;
+.my_carousel_section.video_play .my_carousel_item_video {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  transition: 0.5s;
-  overflow: hidden;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.aboute .video_show video {
-  display: flex;
-  position: relative;
-  width: 50%;
-  height: 80%;
-  margin-top: 5%;
-  object-fit: cover;
-  transition: 0.5s;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.aboute.video_play .carousel {
-  visibility: hidden;
-  opacity: 0;
-}
-
-.aboute.video_play .video_show {
-  opacity: 1;
-  visibility: visible;
-}
-
-.aboute.video_play .video_show video {
   width: 100%;
-  opacity: 1;
   visibility: visible;
+  border-radius: 0;
+}
+
+.my_carousel_section.video_play .my_carousel_item_body {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.my_carousel_section .carousel {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.my_carousel_section.video_play .carousel {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.my_carousel_section.video_play .stop_video_play {
+  visibility: visible;
+}
+
+.my_carousel_section.video_play .stop_video_play svg {
+  width: 40px;
+  height: 40px;
+  transition: 0.5s;
+  object-fit: contain;
+}
+
+.my_carousel_section.video_play .stop_video_play:hover {
+  opacity: 1;
+}
+
+.my_carousel_section.video_play .stop_video_play:hover svg {
+  width: 60px;
+  height: 60px;
 }
 
 .stop_video_play {
   display: flex;
+  visibility: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0.3;
+  transition: 0.5s;
 }
 
 .stop_video_play svg {
-  width: 40px;
-  height: 40px;
+  width: 0;
+  height: 0;
+  transition: 0.5s;
   object-fit: contain;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .button_go {
@@ -3183,5 +3190,80 @@ section.aboute {
 
 .part_form_forms {
   margin-bottom: 30px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: initial;
+  bottom: initial;
+  left: initial;
+  right: initial;
+  transform: none;
+  margin: 0;
+}
+
+.swiper-button-next::before,
+.swiper-button-prev::before {
+  display: none;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next img,
+.swiper-button-prev img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.swiper-pagination {
+  width: initial !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  top: initial;
+  bottom: initial !important;
+  left: initial;
+  right: initial;
+  margin: 0 20px;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  display: inline-block;
+  width: 15px;
+  height: 2px;
+  border-radius: 5px;
+  background: #5C7690;
+  opacity: 0.3;
+  border-radius: 5px;
+}
+
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #5C7690;
+  opacity: 1;
+}
+
+.my_carousell_controller {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  top: initial;
+  bottom: initial;
+  left: initial;
+  right: initial;
 }
 /*# sourceMappingURL=main.css.map */

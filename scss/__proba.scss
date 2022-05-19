@@ -37,7 +37,7 @@ section.aboute {
 
 .my_carousel_item {
   position: relative;
-  padding-top: 88px;
+
   @media (max-width: 575px) {
     padding-top: 30px;
   }
@@ -45,7 +45,12 @@ section.aboute {
 
 .my_carousel_item_body {
   position: relative;
+  padding-bottom: 20px;
   z-index: 10;
+
+  @media (max-width: 991px) {
+    padding-bottom: 0;
+  }
 }
 
 .my_carousel_item_video {
@@ -56,78 +61,84 @@ section.aboute {
   height: 100%;
   object-fit: cover;
   border-radius: 0 0 0 40px;
+  transition: 0.5s;
+
   @media (max-width: 991px) {
     display: none;
+    width: 0;
     visibility: hidden;
   }
 }
 
+.my_carousel_section {
+  &.video_play {
+    .my_carousel_item_video {
+      display: flex;
+      width: 100%;
+      visibility: visible;
+      border-radius: 0;
+    }
 
-.aboute {
+    .my_carousel_item_body {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+
+.my_carousel_section {
   .carousel {
     visibility: visible;
     opacity: 1;
     transition: 0.5s;
   }
 
-  .video_show {
-    position: absolute;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    transition: 0.5s;
-    overflow: hidden;
-    opacity: 0;
-    visibility: hidden;
-
-    video {
-      display: flex;
-      position: relative;
-      width: 50%;
-      height: 80%;
-      margin-top: 5%;
-      object-fit: cover;
-      transition: 0.5s;
-
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
 
   &.video_play {
     .carousel {
       visibility: hidden;
       opacity: 0;
-      // position: absolute;
+      transition: 0.5s;
     }
 
-    .video_show {
-      opacity: 1;
+    .stop_video_play {
       visibility: visible;
-      // position: relative;
 
-      video {
-        width: 100%;
+      svg {
+        width: 40px;
+        height: 40px;
+        transition: 0.5s;
+        object-fit: contain;
+      }
+
+      &:hover {
         opacity: 1;
-        visibility: visible;
+
+        svg {
+          width: 60px;
+          height: 60px;
+        }
       }
     }
   }
 }
+
 .stop_video_play {
   display: flex;
+  visibility: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0.3;
+  transition: 0.5s;
+
   svg {
-    width: 40px;
-    height: 40px;
+    width: 0;
+    height: 0;
+    transition: 0.5s;
     object-fit: contain;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }

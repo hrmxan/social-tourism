@@ -176,18 +176,27 @@ try {
 }
 
 let play_buttos_c_ney = document.querySelectorAll('.play_buttos_c_ney');
-let videoCNey = document.getElementById('videoCNey');
-let videoCNeyBody = document.getElementById('videoCNeyBody');
+let videoCNey;
+let videoCNeyBody;
+let my_carousel_section = document.querySelectorAll('.my_carousel_section');
+let my_carousel_item_video = document.querySelectorAll('.my_carousel_item_video');
 
 try {
     play_buttos_c_ney.forEach(element => {
         element.addEventListener('click', function (e) {
-            e.preventDefault();
+            my_carousel_section.forEach(element => {
+                element.classList.remove('video_play');
+            });
+            videoCNeyBody = e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
+            videoCNeyBody.classList.add('video_play');
+            videoCNey = videoCNeyBody.childNodes[1];
+            my_carousel_item_video.forEach(element => {
+                element.pause();
+                element.currentTime = 0;
+            });
             setTimeout(function () {
                 videoCNey.play();
             }, 500);
-
-            videoCNeyBody.classList.add('video_play');
         });
     });
 } catch (e) {
@@ -195,12 +204,17 @@ try {
 }
 let stop_video_play = document.querySelectorAll('.stop_video_play');
 
+
 try {
     stop_video_play.forEach(element => {
         element.addEventListener('click', function (e) {
-            e.preventDefault();
-            videoCNey.pause();
-            videoCNeyBody.classList.remove('video_play');
+            my_carousel_section.forEach(element => {
+                element.classList.remove('video_play');
+            });
+            my_carousel_item_video.forEach(element => {
+                element.pause();
+                element.currentTime = 0;
+            });
         });
     });
 } catch (e) {
@@ -246,16 +260,15 @@ let phone_number_input = document.querySelectorAll('.phone_number_input');
 
 phone_number_input.forEach(element => {
     element.addEventListener('input', function (e) {
-        let tel = element;
         let maskOptions = {
             phone: {
-                mask: "+{998}(00)000-00-00",
-                lazy: true,
+                mask: "+998 (00) 000-00-00",
+                lazy: false,
                 placeholderChar: "-",
             },
         };
-        if (tel) {
-            let mask = IMask(tel, maskOptions.phone);
+        if (element) {
+            let mask = IMask(element, maskOptions.phone);
         }
     });
 });
@@ -298,3 +311,18 @@ try {
 } catch (e) {
     console.log(e);
 }
+
+// carousel
+const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });

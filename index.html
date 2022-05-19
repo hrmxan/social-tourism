@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/aos.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/main.css">
   <title>Social tourism</title>
 </head>
@@ -102,35 +103,262 @@
         <div class="my_fixed_card my_card">
           <form class="d-flex flex-column">
             <a class="krestik krestik-mini-modal" href="#actions">
-            <img src="./img/svg/close-square.svg">
-          </a>
-          <p class="top_text">Делайте добро</p>
-          <strong>кому реально нуждается</strong>
-          <div class="sum_buttons">
-            <a class="active card_sum_buttons mute_buttons" href="#">Сум (Уз)</a>
-            <a class="card_sum_buttons mute_buttons" href="#">Руб (Ру)</a>
-            <a class="card_sum_buttons mute_buttons" href="#">Eur (Ев)</a>
-          </div>
-          <div class="plast_card">
-            <h3 class="numer_card">8600 0000 0000 0000</h3>
-            <p class="name">Палончиева Палончи</p>
-          </div>
-          <button type="submit" class="card_submit kok_buttons mute_buttons">Делаю добро</button>
+              <img src="./img/svg/close-square.svg">
+            </a>
+            <p class="top_text">Делайте добро</p>
+            <strong>кому реально нуждается</strong>
+            <div class="sum_buttons">
+              <a class="active card_sum_buttons mute_buttons" href="#">Сум (Уз)</a>
+              <a class="card_sum_buttons mute_buttons" href="#">Руб (Ру)</a>
+              <a class="card_sum_buttons mute_buttons" href="#">Eur (Ев)</a>
+            </div>
+            <div class="plast_card">
+              <h3 class="numer_card">8600 0000 0000 0000</h3>
+              <p class="name">Палончиева Палончи</p>
+            </div>
+            <button type="submit" class="card_submit kok_buttons mute_buttons">Делаю добро</button>
           </form>
         </div>
       </div>
     </section>
 
-    <section id="videoCNeyBody" class="proba aboute">
+    <section class="carousel_dobro proba aboute">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide my_carousel_item">
+            <section class="my_carousel_section position-relative">
+              <video class="my_carousel_item_video" src="./video/video1.mp4" poster="./img/video_bg.png"></video>
+              <a class="stop_video_play mute_buttons" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stop-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3z"/>
+                </svg>
+              </a>
+              <div class="container my_carousel_item_body">
+                <div class="content">
+                  <h1>
+                    Я тоже хочу путешествовать мир, как здоровые люди
+                  </h1>
+                  <p>
+                    Она тоже хочет путешествовать мир,
+                    как нас
+                  </p>
+                  <div class="play_buttos_c_ney play_button">
+                    <a href="#" class="mute_buttons button_go">
+                      <img src="./img/svg/play_button.svg" alt="play">
+                      Посмотреть видео о ней
+                    </a>
+                  </div>
+                </div>
+                <div class="row aboute_content">
+                  <div class="col-12 col-sm-10 col-xl-8">
+                    <div class="my_card">
+                      <form>
+                        <div class="row">
+                          <div class="col-12 mb-3 mb-lg-0 col-lg-4 d-flex flex-column">
+                            <div class="text">
+                              <p>
+                                Пожертвования для
+                              </p>
+                              <strong>
+                                Айгуль Темировой
+                              </strong>
+
+                            </div>
+                            <input type="number" placeholder="Номер карты">
+                          </div>
+                          <div class="col-12 col-lg-8 d-flex flex-column justify-content-between">
+                            <div class="sums">
+                              <span class="line"></span>
+                              <strong class="min">
+                                2 105 000 сум
+                              </strong>
+                              <strong class="max">
+                                4 500 000 сум
+                              </strong>
+                            </div>
+                            <div class="row mt-2 mt-lg-0">
+                              <div class="col-12 col-lg-7 d-flex flex-column justify-content-end">
+                                <input class="w-100" type="number" placeholder="Сумма">
+                              </div>
+                              <div
+                                class="col-12 col-lg-5 d-flex align-content-between justify-content-end mt-2 mt-lg-0">
+                                <button type="submit" class="submin_sum kok_buttons delayu_dobro mute_buttons">
+                                  Делать добро
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="swiper-slide my_carousel_item">
+            <section class="my_carousel_section position-relative">
+              <video class="my_carousel_item_video" src="./video/video1.mp4" poster="./img/video_bg.png"></video>
+              <a class="stop_video_play mute_buttons" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stop-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3z"/>
+                </svg>
+              </a>
+              <div class="container my_carousel_item_body">
+                <div class="content">
+                  <h1>
+                    Я тоже хочу путешествовать мир, как здоровые люди
+                  </h1>
+                  <p>
+                    Она тоже хочет путешествовать мир,
+                    как нас
+                  </p>
+                  <div class="play_buttos_c_ney play_button">
+                    <a href="#" class="mute_buttons button_go">
+                      <img src="./img/svg/play_button.svg" alt="play">
+                      Посмотреть видео о ней
+                    </a>
+                  </div>
+                </div>
+                <div class="row aboute_content">
+                  <div class="col-12 col-sm-10 col-xl-8">
+                    <div class="my_card">
+                      <form>
+                        <div class="row">
+                          <div class="col-12 mb-3 mb-lg-0 col-lg-4 d-flex flex-column">
+                            <div class="text">
+                              <p>
+                                Пожертвования для
+                              </p>
+                              <strong>
+                                Айгуль Темировой
+                              </strong>
+
+                            </div>
+                            <input type="number" placeholder="Номер карты">
+                          </div>
+                          <div class="col-12 col-lg-8 d-flex flex-column justify-content-between">
+                            <div class="sums">
+                              <span class="line"></span>
+                              <strong class="min">
+                                2 105 000 сум
+                              </strong>
+                              <strong class="max">
+                                4 500 000 сум
+                              </strong>
+                            </div>
+                            <div class="row mt-2 mt-lg-0">
+                              <div class="col-12 col-lg-7 d-flex flex-column justify-content-end">
+                                <input class="w-100" type="number" placeholder="Сумма">
+                              </div>
+                              <div
+                                class="col-12 col-lg-5 d-flex align-content-between justify-content-end mt-2 mt-lg-0">
+                                <button type="submit" class="submin_sum kok_buttons delayu_dobro mute_buttons">
+                                  Делать добро
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="swiper-slide my_carousel_item">
+            <section class="my_carousel_section position-relative">
+              <video class="my_carousel_item_video" src="./video/video1.mp4" poster="./img/video_bg.png"></video>
+              <a class="stop_video_play mute_buttons" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stop-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3z"/>
+                </svg>
+              </a>
+              <div class="container my_carousel_item_body">
+                <div class="content">
+                  <h1>
+                    Я тоже хочу путешествовать мир, как здоровые люди
+                  </h1>
+                  <p>
+                    Она тоже хочет путешествовать мир,
+                    как нас
+                  </p>
+                  <div class="play_buttos_c_ney play_button">
+                    <a class="button_go mute_buttons">
+                      <img src="./img/svg/play_button.svg" alt="play">
+                      Посмотреть видео о ней
+                    </a>
+                  </div>
+                </div>
+                <div class="row aboute_content">
+                  <div class="col-12 col-sm-10 col-xl-8">
+                    <div class="my_card">
+                      <form>
+                        <div class="row">
+                          <div class="col-12 mb-3 mb-lg-0 col-lg-4 d-flex flex-column">
+                            <div class="text">
+                              <p>
+                                Пожертвования для
+                              </p>
+                              <strong>
+                                Айгуль Темировой
+                              </strong>
+
+                            </div>
+                            <input type="number" placeholder="Номер карты">
+                          </div>
+                          <div class="col-12 col-lg-8 d-flex flex-column justify-content-between">
+                            <div class="sums">
+                              <span class="line"></span>
+                              <strong class="min">
+                                2 105 000 сум
+                              </strong>
+                              <strong class="max">
+                                4 500 000 сум
+                              </strong>
+                            </div>
+                            <div class="row mt-2 mt-lg-0">
+                              <div class="col-12 col-lg-7 d-flex flex-column justify-content-end">
+                                <input class="w-100" type="number" placeholder="Сумма">
+                              </div>
+                              <div
+                                class="col-12 col-lg-5 d-flex align-content-between justify-content-end mt-2 mt-lg-0">
+                                <button type="submit" class="submin_sum kok_buttons delayu_dobro mute_buttons">
+                                  Делать добро
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="container position-relative my_carousell_controller">
+          <div class="swiper-button-prev">
+            <img src="./img/svg/left.svg">
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next">
+            <img src="./img/svg/right.svg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proba aboute d-none">
       <div class="video_show container">
-        <video  id="videoCNey" src="./video/video1.mp4" poster="./img/video_bg.png">
-          
+        <video src="./video/video1.mp4" poster="./img/video_bg.png">
         </video>
         <a class="stop_video_play mute_buttons" href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-stop-circle" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-            <path d="M5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3z"/>
-          </svg>
         </a>
       </div>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="fade-up">
@@ -147,7 +375,7 @@
                   как нас
                 </p>
                 <div class="play_buttos_c_ney play_button">
-                  <a href="#videoCNeyBody" class="button_go">
+                  <a href="#" class="button_go mute_buttons">
                     <img src="./img/svg/play_button.svg" alt="play">
                     Посмотреть видео о ней
                   </a>
@@ -158,40 +386,40 @@
                   <div class="my_card">
                     <form>
                       <div class="row">
-                      <div class="col-12 mb-3 mb-lg-0 col-lg-4 d-flex flex-column">
-                        <div class="text">
-                          <p>
-                            Пожертвования для
-                          </p>
-                          <strong>
-                            Айгуль Темировой
-                          </strong>
+                        <div class="col-12 mb-3 mb-lg-0 col-lg-4 d-flex flex-column">
+                          <div class="text">
+                            <p>
+                              Пожертвования для
+                            </p>
+                            <strong>
+                              Айгуль Темировой
+                            </strong>
 
-                        </div>
-                        <input type="number" placeholder="Номер карты">
-                      </div>
-                      <div class="col-12 col-lg-8 d-flex flex-column justify-content-between">
-                        <div class="sums">
-                          <span class="line"></span>
-                          <strong class="min">
-                            2 105 000 сум
-                          </strong>
-                          <strong class="max">
-                            4 500 000 сум
-                          </strong>
-                        </div>
-                        <div class="row mt-2 mt-lg-0">
-                          <div class="col-12 col-lg-7 d-flex flex-column justify-content-end">
-                            <input class="w-100" type="number" placeholder="Сумма">
                           </div>
-                          <div class="col-12 col-lg-5 d-flex align-content-between justify-content-end mt-2 mt-lg-0">
-                            <button type="submit" class="submin_sum kok_buttons delayu_dobro mute_buttons">
-                              Делать добро
-                            </button>
+                          <input type="number" placeholder="Номер карты">
+                        </div>
+                        <div class="col-12 col-lg-8 d-flex flex-column justify-content-between">
+                          <div class="sums">
+                            <span class="line"></span>
+                            <strong class="min">
+                              2 105 000 сум
+                            </strong>
+                            <strong class="max">
+                              4 500 000 сум
+                            </strong>
+                          </div>
+                          <div class="row mt-2 mt-lg-0">
+                            <div class="col-12 col-lg-7 d-flex flex-column justify-content-end">
+                              <input class="w-100" type="number" placeholder="Сумма">
+                            </div>
+                            <div class="col-12 col-lg-5 d-flex align-content-between justify-content-end mt-2 mt-lg-0">
+                              <button type="submit" class="submin_sum kok_buttons delayu_dobro mute_buttons">
+                                Делать добро
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
                     </form>
                   </div>
                 </div>
@@ -212,7 +440,7 @@
                   как нас
                 </p>
                 <div class="play_buttos_c_ney play_button">
-                  <a href="#videoCNeyBody" class="button_go">
+                  <a href="#" class="button_go mute_buttons">
                     <img src="./img/svg/play_button.svg" alt="play">
                     Посмотреть видео о ней
                   </a>
@@ -223,40 +451,40 @@
                   <div class="my_card">
                     <form>
                       <div class="row">
-                      <div class="col-12 mb-3 mb-lg-0 col-lg-4 d-flex flex-column">
-                        <div class="text">
-                          <p>
-                            Пожертвования для
-                          </p>
-                          <strong>
-                            Айгуль Темировой
-                          </strong>
+                        <div class="col-12 mb-3 mb-lg-0 col-lg-4 d-flex flex-column">
+                          <div class="text">
+                            <p>
+                              Пожертвования для
+                            </p>
+                            <strong>
+                              Айгуль Темировой
+                            </strong>
 
-                        </div>
-                        <input type="number" placeholder="Номер карты">
-                      </div>
-                      <div class="col-12 col-lg-8 d-flex flex-column justify-content-between">
-                        <div class="sums">
-                          <span class="line"></span>
-                          <strong class="min">
-                            2 105 000 сум
-                          </strong>
-                          <strong class="max">
-                            4 500 000 сум
-                          </strong>
-                        </div>
-                        <div class="row mt-2 mt-lg-0">
-                          <div class="col-12 col-lg-7 d-flex flex-column justify-content-end">
-                            <input class="w-100" type="number" placeholder="Сумма">
                           </div>
-                          <div class="col-12 col-lg-5 d-flex align-content-between justify-content-end mt-2 mt-lg-0">
-                            <button type="submit" class="submin_sum kok_buttons delayu_dobro mute_buttons">
-                              Делать добро
-                            </button>
+                          <input type="number" placeholder="Номер карты">
+                        </div>
+                        <div class="col-12 col-lg-8 d-flex flex-column justify-content-between">
+                          <div class="sums">
+                            <span class="line"></span>
+                            <strong class="min">
+                              2 105 000 сум
+                            </strong>
+                            <strong class="max">
+                              4 500 000 сум
+                            </strong>
+                          </div>
+                          <div class="row mt-2 mt-lg-0">
+                            <div class="col-12 col-lg-7 d-flex flex-column justify-content-end">
+                              <input class="w-100" type="number" placeholder="Сумма">
+                            </div>
+                            <div class="col-12 col-lg-5 d-flex align-content-between justify-content-end mt-2 mt-lg-0">
+                              <button type="submit" class="submin_sum kok_buttons delayu_dobro mute_buttons">
+                                Делать добро
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
                     </form>
                   </div>
                 </div>
@@ -277,7 +505,7 @@
                   как нас
                 </p>
                 <div class="play_buttos_c_ney play_button">
-                  <a href="#videoCNeyBody" class="button_go">
+                  <a href="#" class="button_go">
                     <img src="./img/svg/play_button.svg" alt="play">
                     Посмотреть видео о ней
                   </a>
@@ -288,40 +516,40 @@
                   <div class="my_card">
                     <form>
                       <div class="row">
-                      <div class="col-12 mb-3 mb-lg-0 col-lg-4 d-flex flex-column">
-                        <div class="text">
-                          <p>
-                            Пожертвования для
-                          </p>
-                          <strong>
-                            Айгуль Темировой
-                          </strong>
+                        <div class="col-12 mb-3 mb-lg-0 col-lg-4 d-flex flex-column">
+                          <div class="text">
+                            <p>
+                              Пожертвования для
+                            </p>
+                            <strong>
+                              Айгуль Темировой
+                            </strong>
 
-                        </div>
-                        <input type="number" placeholder="Номер карты">
-                      </div>
-                      <div class="col-12 col-lg-8 d-flex flex-column justify-content-between">
-                        <div class="sums">
-                          <span class="line"></span>
-                          <strong class="min">
-                            2 105 000 сум
-                          </strong>
-                          <strong class="max">
-                            4 500 000 сум
-                          </strong>
-                        </div>
-                        <div class="row mt-2 mt-lg-0">
-                          <div class="col-12 col-lg-7 d-flex flex-column justify-content-end">
-                            <input class="w-100" type="number" placeholder="Сумма">
                           </div>
-                          <div class="col-12 col-lg-5 d-flex align-content-between justify-content-end mt-2 mt-lg-0">
-                            <button type="submit" class="submin_sum kok_buttons delayu_dobro mute_buttons">
-                              Делать добро
-                            </button>
+                          <input type="number" placeholder="Номер карты">
+                        </div>
+                        <div class="col-12 col-lg-8 d-flex flex-column justify-content-between">
+                          <div class="sums">
+                            <span class="line"></span>
+                            <strong class="min">
+                              2 105 000 сум
+                            </strong>
+                            <strong class="max">
+                              4 500 000 сум
+                            </strong>
+                          </div>
+                          <div class="row mt-2 mt-lg-0">
+                            <div class="col-12 col-lg-7 d-flex flex-column justify-content-end">
+                              <input class="w-100" type="number" placeholder="Сумма">
+                            </div>
+                            <div class="col-12 col-lg-5 d-flex align-content-between justify-content-end mt-2 mt-lg-0">
+                              <button type="submit" class="submin_sum kok_buttons delayu_dobro mute_buttons">
+                                Делать добро
+                              </button>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
                     </form>
                   </div>
                 </div>
@@ -510,23 +738,23 @@
                 </strong>
               </div>
               <form>
-               <div class="my_select my_selects">
-                 <a href="#" class="mute_buttons">
-                  Я помогу
-                 </a>
-                 <img src="./img/svg/strelka.svg" alt="strelka icon">
-                 <div class="my_select_body">
-                   <a href="#" class="mute_buttons my_select_items">
-                    Я помогу1
-                   </a>
-                   <a href="#" class="mute_buttons my_select_items">
-                    Я помогу2
-                   </a>
-                   <a href="#" class="mute_buttons my_select_items">
-                    Я помогу3
-                   </a>
-                 </div>
-               </div>
+                <div class="my_select my_selects">
+                  <a href="#" class="mute_buttons">
+                    Я помогу
+                  </a>
+                  <img src="./img/svg/strelka.svg" alt="strelka icon">
+                  <div class="my_select_body">
+                    <a href="#" class="mute_buttons my_select_items">
+                      Я помогу1
+                    </a>
+                    <a href="#" class="mute_buttons my_select_items">
+                      Я помогу2
+                    </a>
+                    <a href="#" class="mute_buttons my_select_items">
+                      Я помогу3
+                    </a>
+                  </div>
+                </div>
                 <input type="number" placeholder="Номер карты">
                 <input type="number" placeholder="Сумма">
                 <div class="pays_row">
@@ -810,8 +1038,8 @@
               Нужен помошь
             </a>
           </li>
-          
-          
+
+
         </ul>
       </div>
       <div class="bottom">
@@ -858,6 +1086,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
   <script src="./js/aos.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
   <script src="./js/actions.js"></script>
 </body>
 
