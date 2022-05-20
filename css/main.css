@@ -2262,6 +2262,10 @@ section.aboute {
   animation-direction: alternate;
 }
 
+.single_top_section {
+  margin-top: 50px;
+}
+
 @keyframes single_top_card_img_animation {
   0%,
   100% {
